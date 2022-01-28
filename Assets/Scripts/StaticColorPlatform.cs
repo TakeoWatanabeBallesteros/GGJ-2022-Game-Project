@@ -13,6 +13,7 @@ public class StaticColorPlatform : MonoBehaviour
 
     private void OnEnable()
     {
+        print(ColorManager.Instance.currentColors[0] == Color.black);
         ColorManager.Instance.OnColorSwitched += CheckColor;
     }
 

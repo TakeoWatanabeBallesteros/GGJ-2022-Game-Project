@@ -58,7 +58,11 @@ public class ColorManager : MonoBehaviour
     private void OnDisable()
     {
         Controls.Scenario.SwitchColors.Disable();
-        Controls.Scenario.SwitchColors.performed -= _ => OnColorSwitch?.Invoke(currentColors);
+        Controls.Scenario.SwitchColors.performed -= _ =>
+        {
+            OnColorSwitch?.Invoke(currentColors);
+            OnColorSwitched?.Invoke();
+        };
     }
 
     public void ChangeColor(GameObject ob, bool top)
