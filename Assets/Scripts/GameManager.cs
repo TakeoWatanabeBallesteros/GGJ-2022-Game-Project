@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     }
 
     void OnEnable() {
-        Controls.Player.SwtichPlayer.Enable();
+        //Controls.Player.SwtichPlayer.Enable();
         Controls.Player.SwtichPlayer.performed += _ => SwitchPlayer();
     }
 

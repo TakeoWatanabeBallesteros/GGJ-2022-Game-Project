@@ -75,7 +75,7 @@ public class Jumper : MonoBehaviour
         Controls.Player.JumpStarted.Enable();
         Controls.Player.JumpStarted.performed += ctx => OnJumpStarted();
         Controls.Player.JumpStarted.canceled += ctx => OnJumpFinished();
-        EnergyBall.OnEnergyBallCollected += ctx => _EnergyBall(ctx);
+        EnergyBall.OnEnergyBallCollected += _EnergyBall;
     }
 
     private void OnDisable()
@@ -84,6 +84,7 @@ public class Jumper : MonoBehaviour
         Controls.Player.JumpStarted.Disable();
         Controls.Player.JumpStarted.performed -= ctx => OnJumpStarted();
         Controls.Player.JumpStarted.canceled -= ctx => OnJumpFinished();
+        EnergyBall.OnEnergyBallCollected -= _EnergyBall;
     }
 
     private void OnLanded()
@@ -155,9 +156,9 @@ public class Jumper : MonoBehaviour
         }
     }
 
-    private void _EnergyBall(GameObject obj){ 
-        if (obj == gameObject){
-
+    private void _EnergyBall(GameObject obj, bool isTop){ 
+        if (obj != gameObject){
+            //Change param
         }
     }
 }
