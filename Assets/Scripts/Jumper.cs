@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,10 +9,9 @@ public class Jumper : MonoBehaviour
     private Rigidbody2D _rigidbody;
     [SerializeField]
     private GroundChecker _groundChecker;
-    [SerializeField]
-    private GroundChecker _wallChecker;
+    //[SerializeField]
+    //private GroundChecker _wallChecker;
     private PlayerInput _input;
-    private ForceController _forceController;
 
     //Parametres del salt
     [SerializeField]
@@ -20,6 +20,7 @@ public class Jumper : MonoBehaviour
     float timeToPeak;
     DateTime timeStart;
     //Parametres de la gravetat
+    int gravityDir;
     [SerializeField]
     float gravityConstant;
 
@@ -28,7 +29,7 @@ public class Jumper : MonoBehaviour
     public bool imJumping;
     public bool peakReached;
     bool onGravityArea;
-    bool onHorizontalGravityArea;
+    //bool onHorizontalGravityArea;
 
     private void OnDrawGizmos()
     {
@@ -41,51 +42,33 @@ public class Jumper : MonoBehaviour
     void Awake()
     {
         onGravityArea = false;
-        onHorizontalGravityArea = false;
+        //onHorizontalGravityArea = false;
         peakReached = false;
         imJumping = false;
-        _forceController = GetComponent<ForceController>();
+        gravityDir = 1;
         _rigidbody = GetComponent<Rigidbody2D>();
         _input = GetComponent<PlayerInput>();
     }
     private void Update()
     {
-        if (imJumping && (Math.Sign(lastVelocityFrame) > 0) && (Math.Sign(_forceController.GetVerticalVelocity() * _forceController.GetGravityDir()) < 0) && peakReached == false)
+        if (imJumping && (Math.Sign(lastVelocityFrame) > 0) && (Math.Sign(_rigidbody.velocity.y) < 0) && peakReached == false)
         {
             if (onGravityArea == true)
             {
-                _forceController.InvertGravityDir();
-                _rigidbody.gravityScale = _forceController.GetGravityDir();
+                gravityDir = -gravityDir;
+                _rigidbody.gravityScale = gravityDir;
                 transform.Rotate(new Vector3(0, 180, 180));
                 peakReached = true;
             }
-            else if (onHorizontalGravityArea == true)
-            {
-                peakReached = true;
-                if (_forceController.CheckVerticalGravity())
-                {
-                    transform.Rotate(new Vector3(180, 0, 90));
-                    peakReached = true;
-                    _forceController.ChangeGravityDir();
-                    Physics2D.gravity = new Vector2(-9.81f, 0);
-                }
-                else
-                {
-                    transform.Rotate(new Vector3(180, 0, -90));
-                    peakReached = true;
-                    _forceController.ChangeGravityDir();
-                    Physics2D.gravity = new Vector2(0, -9.81f);
-                }
-            }
         }
-        lastVelocityFrame = _forceController.GetVerticalVelocity() * _forceController.GetGravityDir();
+        lastVelocityFrame = _rigidbody.velocity.y * gravityDir;
     }
 
     private void OnEnable()
     {
         _groundChecker.OnLanded += OnLanded;
-        _wallChecker.OnLanded += OnWall;
-        _wallChecker.LeftLand += LeftWall;
+        //_wallChecker.OnLanded += OnWall;
+        //_wallChecker.LeftLand += LeftWall;
         _input.jumpStarted += OnJumpStarted;
         _input.jumpFinished += OnJumpFinished;
     }
@@ -93,8 +76,8 @@ public class Jumper : MonoBehaviour
     private void OnDisable()
     {
         _groundChecker.OnLanded -= OnLanded;
-        _wallChecker.OnLanded -= OnWall;
-        _wallChecker.OnLanded -= LeftWall;
+        //_wallChecker.OnLanded -= OnWall;
+        //_wallChecker.OnLanded -= LeftWall;
         _input.jumpStarted -= OnJumpStarted;
         _input.jumpFinished -= OnJumpFinished;
     }
@@ -103,21 +86,21 @@ public class Jumper : MonoBehaviour
     {
         imJumping = false;
         peakReached = false;
-        _rigidbody.gravityScale = _forceController.GetGravityDir();
+        _rigidbody.gravityScale = gravityDir;
     }
 
-    private void OnWall()
-    {
-        imJumping = false;
-        peakReached = false;
-        _forceController.SetVerticalVelocity(0);
-        _rigidbody.gravityScale = 0.1f * _forceController.GetGravityDir();
-    }
-
-    private void LeftWall()
-    {
-        _rigidbody.gravityScale = _forceController.GetGravityDir();
-    }
+    //private void OnWall()
+    //{
+    //    imJumping = false;
+    //    peakReached = false;
+    //    _forceController.SetVerticalVelocity(0);
+    //    _rigidbody.gravityScale = 0.1f * _forceController.GetGravityDir();
+    //}
+    //
+    //private void LeftWall()
+    //{
+    //    _rigidbody.gravityScale = _forceController.GetGravityDir();
+    //}
 
     public void setJump()
     {
@@ -138,7 +121,7 @@ public class Jumper : MonoBehaviour
         if (imJumping)
         {
             TimeSpan secondsPassed = DateTime.Now - timeStart;
-            _rigidbody.gravityScale += Mathf.Clamp(1 - ((float)secondsPassed.TotalSeconds / timeToPeak), 0, 1) * gravityConstant * _forceController.GetGravityDir();
+            _rigidbody.gravityScale += Mathf.Clamp(1 - ((float)secondsPassed.TotalSeconds / timeToPeak), 0, 1) * gravityConstant * gravityDir;
         }
     }
 
@@ -146,27 +129,27 @@ public class Jumper : MonoBehaviour
     {
         imJumping = true;
 
-        if (_wallChecker.isGrounded && !_groundChecker.isGrounded)
-        {
-            _rigidbody.gravityScale = _forceController.GetGravityDir();
-        }
-        _forceController.SetVerticalVelocity(GetVelocity());
+        //if (_wallChecker.isGrounded && !_groundChecker.isGrounded)
+        //{
+        //    _rigidbody.gravityScale = gravityDir;
+        //}
+        _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, GetVelocity());
         SetGravity();
     }
 
     float GetVelocity()
     {
-        return 2 * jumpHeight / timeToPeak * _forceController.GetGravityDir();
+        return 2 * jumpHeight / timeToPeak * gravityDir;
     }
 
     bool CanJump()
     {
-        return _groundChecker.isGrounded || _wallChecker.isGrounded;
+        return _groundChecker.isGrounded; // || _wallChecker.isGrounded;
     }
 
     void SetGravity()
     {
-        _rigidbody.gravityScale = _forceController.GetGravityDir() * (-2 * jumpHeight / (timeToPeak * timeToPeak)) / (Physics2D.gravity.y + Physics2D.gravity.x);
+        _rigidbody.gravityScale = gravityDir * (-2 * jumpHeight / (timeToPeak * timeToPeak)) / Physics2D.gravity.y;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -175,11 +158,6 @@ public class Jumper : MonoBehaviour
         {
             onGravityArea = true;
         }
-
-        if (other.CompareTag("gravityAreaHoritzontal"))
-        {
-            onHorizontalGravityArea = true;
-        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -187,11 +165,6 @@ public class Jumper : MonoBehaviour
         if (other.CompareTag("gravityArea"))
         {
             onGravityArea = false;
-        }
-
-        if (other.CompareTag("gravityAreaHoritzontal"))
-        {
-            onHorizontalGravityArea = false;
         }
     }
 }
