@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
         Controls.Player.SwtichPlayer.performed -= _ => SwitchPlayer();
     }
     private void Start() {
-        SwitchPlayer();
+        //SwitchPlayer();
     }
     void SwitchPlayer(){
         if (player1.GetComponent<PlayerMovement>().CanMove){
