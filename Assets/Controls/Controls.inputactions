@@ -264,6 +264,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Scenario",
+            "id": "a8de889d-4960-40df-a5ae-139c75ce5536",
+            "actions": [
+                {
+                    "name": "SwitchColors",
+                    "type": "Button",
+                    "id": "a8335613-4913-44d0-bfa4-3e0d6905cc8e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e0c474ae-c2cd-4ab6-baf4-5cac850a263e",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SwitchColors",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

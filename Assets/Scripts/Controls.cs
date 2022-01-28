@@ -286,6 +286,34 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Scenario"",
+            ""id"": ""a8de889d-4960-40df-a5ae-139c75ce5536"",
+            ""actions"": [
+                {
+                    ""name"": ""SwitchColors"",
+                    ""type"": ""Button"",
+                    ""id"": ""a8335613-4913-44d0-bfa4-3e0d6905cc8e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""e0c474ae-c2cd-4ab6-baf4-5cac850a263e"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SwitchColors"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -296,6 +324,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         m_Player_JumpFinished = m_Player.FindAction("JumpFinished", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_SwtichPlayer = m_Player.FindAction("SwtichPlayer", throwIfNotFound: true);
+        // Scenario
+        m_Scenario = asset.FindActionMap("Scenario", throwIfNotFound: true);
+        m_Scenario_SwitchColors = m_Scenario.FindAction("SwitchColors", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -408,11 +439,48 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
+
+    // Scenario
+    private readonly InputActionMap m_Scenario;
+    private IScenarioActions m_ScenarioActionsCallbackInterface;
+    private readonly InputAction m_Scenario_SwitchColors;
+    public struct ScenarioActions
+    {
+        private @Controls m_Wrapper;
+        public ScenarioActions(@Controls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @SwitchColors => m_Wrapper.m_Scenario_SwitchColors;
+        public InputActionMap Get() { return m_Wrapper.m_Scenario; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(ScenarioActions set) { return set.Get(); }
+        public void SetCallbacks(IScenarioActions instance)
+        {
+            if (m_Wrapper.m_ScenarioActionsCallbackInterface != null)
+            {
+                @SwitchColors.started -= m_Wrapper.m_ScenarioActionsCallbackInterface.OnSwitchColors;
+                @SwitchColors.performed -= m_Wrapper.m_ScenarioActionsCallbackInterface.OnSwitchColors;
+                @SwitchColors.canceled -= m_Wrapper.m_ScenarioActionsCallbackInterface.OnSwitchColors;
+            }
+            m_Wrapper.m_ScenarioActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @SwitchColors.started += instance.OnSwitchColors;
+                @SwitchColors.performed += instance.OnSwitchColors;
+                @SwitchColors.canceled += instance.OnSwitchColors;
+            }
+        }
+    }
+    public ScenarioActions @Scenario => new ScenarioActions(this);
     public interface IPlayerActions
     {
         void OnJumpStarted(InputAction.CallbackContext context);
         void OnJumpFinished(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
         void OnSwtichPlayer(InputAction.CallbackContext context);
+    }
+    public interface IScenarioActions
+    {
+        void OnSwitchColors(InputAction.CallbackContext context);
     }
 }
