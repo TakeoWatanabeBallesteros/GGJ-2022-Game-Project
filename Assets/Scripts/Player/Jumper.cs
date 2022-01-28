@@ -75,6 +75,7 @@ public class Jumper : MonoBehaviour
         Controls.Player.JumpStarted.Enable();
         Controls.Player.JumpStarted.performed += ctx => OnJumpStarted();
         Controls.Player.JumpStarted.canceled += ctx => OnJumpFinished();
+        EnergyBall.OnEnergyBallCollected += ctx => _EnergyBall(ctx);
     }
 
     private void OnDisable()
@@ -99,7 +100,6 @@ public class Jumper : MonoBehaviour
 
     void OnJumpStarted()
     {
-        Debug.Log("Hi");
         if (CanJump())
         {
             timeStart = DateTime.Now;
@@ -152,6 +152,12 @@ public class Jumper : MonoBehaviour
         if (other.CompareTag("gravityArea"))
         {
             onGravityArea = false;
+        }
+    }
+
+    private void _EnergyBall(GameObject obj){ 
+        if (obj == gameObject){
+
         }
     }
 }
