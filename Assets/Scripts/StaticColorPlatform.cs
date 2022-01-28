@@ -5,6 +5,8 @@ using UnityEngine;
 public class StaticColorPlatform : MonoBehaviour
 {
     [SerializeField]
+    int colorIdx;
+    [SerializeField]
     ColorBackground _background;
     SpriteRenderer _renderer;
     Collider2D _collider;
@@ -13,6 +15,7 @@ public class StaticColorPlatform : MonoBehaviour
     {
         _collider = GetComponent<Collider2D>();
         _renderer = GetComponent<SpriteRenderer>();
+        _renderer.color = ColorManager.Instance.colors[colorIdx];
     }
 
     public void CheckColor()

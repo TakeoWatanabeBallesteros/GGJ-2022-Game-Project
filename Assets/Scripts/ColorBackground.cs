@@ -4,22 +4,20 @@ using UnityEngine;
 
 public class ColorBackground : MonoBehaviour
 {
-    public Color[] colors;
     public Color myColor => _renderer.color;
-    Color t;
     protected SpriteRenderer _renderer;
-    int colorIdx;
+    [SerializeField]
+    protected int colorIdx;
     // Start is called before the first frame update
-    void Awake()
+    protected virtual void Start()
     {
         _renderer = GetComponent<SpriteRenderer>();
-        colorIdx = 0;
-        _renderer.color = colors[colorIdx];
+        _renderer.color = ColorManager.Instance.colors[colorIdx];
     }
 
     public void ChangeColor()
     {
-        colorIdx = (colorIdx + 1) % colors.Length;
-        _renderer.color = colors[colorIdx];
+        colorIdx = (colorIdx + 1) % 2;
+        _renderer.color = ColorManager.Instance.colors[colorIdx];
     }
 }

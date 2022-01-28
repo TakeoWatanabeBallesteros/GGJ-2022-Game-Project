@@ -9,10 +9,10 @@ public class ChangingColorPlatform : ColorBackground
     Collider2D _collider;
 
     // Start is called before the first frame update
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         _collider = GetComponent<Collider2D>();
-        _renderer = GetComponent<SpriteRenderer>();
     }
 
     public void CheckColor()
