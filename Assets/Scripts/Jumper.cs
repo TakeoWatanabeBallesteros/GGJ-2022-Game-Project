@@ -7,8 +7,7 @@ public class Jumper : MonoBehaviour
 {
     //Altres classes
     private Rigidbody2D _rigidbody;
-    [SerializeField]
-    private GroundChecker _groundChecker;
+    public GroundChecker _groundChecker;
     //[SerializeField]
     //private GroundChecker _wallChecker;
     private PlayerInput _input;
@@ -22,7 +21,7 @@ public class Jumper : MonoBehaviour
     //Parametres de la gravetat
     int gravityDir;
     [SerializeField]
-    float gravityConstant;
+    float gravityEffector;
 
     //flags i controladors
     float lastVelocityFrame;
@@ -121,7 +120,7 @@ public class Jumper : MonoBehaviour
         if (imJumping)
         {
             TimeSpan secondsPassed = DateTime.Now - timeStart;
-            _rigidbody.gravityScale += Mathf.Clamp(1 - ((float)secondsPassed.TotalSeconds / timeToPeak), 0, 1) * gravityConstant * gravityDir;
+            _rigidbody.gravityScale += Mathf.Clamp(1 - ((float)secondsPassed.TotalSeconds / timeToPeak), 0, 1) * gravityEffector * gravityDir;
         }
     }
 
