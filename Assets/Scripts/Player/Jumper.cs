@@ -55,7 +55,6 @@ public class Jumper : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log("Hi");
         if (imJumping && (Math.Sign(lastVelocityFrame) > 0) && (Math.Sign(_rigidbody.velocity.y) < 0) && peakReached == false)
         {
             if (onGravityArea == true)

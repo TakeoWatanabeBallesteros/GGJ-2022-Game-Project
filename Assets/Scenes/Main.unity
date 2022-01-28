@@ -542,13 +542,13 @@ MonoBehaviour:
   m_LookaheadIgnoreY: 0
   m_XDamping: 0
   m_YDamping: 0
-  m_ZDamping: 1
+  m_ZDamping: 1.5
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
   m_CameraDistance: 10
-  m_DeadZoneWidth: 0.11
-  m_DeadZoneHeight: 0.8
+  m_DeadZoneWidth: 0.05
+  m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 0.8
@@ -558,15 +558,15 @@ MonoBehaviour:
   m_CenterOnActivate: 1
   m_GroupFramingMode: 2
   m_AdjustmentMode: 0
-  m_GroupFramingSize: 0.3
+  m_GroupFramingSize: 0.2
   m_MaxDollyIn: 5000
   m_MaxDollyOut: 5000
   m_MinimumDistance: 1
   m_MaximumDistance: 5000
   m_MinimumFOV: 3
   m_MaximumFOV: 60
-  m_MinimumOrthoSize: 1
-  m_MaximumOrthoSize: 5000
+  m_MinimumOrthoSize: 0.2
+  m_MaximumOrthoSize: 13
 --- !u!114 &590046485
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1279,7 +1279,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 7.130006
+  orthographic size: 10.695009
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1303,7 +1303,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 903735463}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.744294, y: 4.5900016, z: -11}
+  m_LocalPosition: {x: -7.7442937, y: 4.590002, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1584,7 +1584,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a0b45f53ecfb624fac7e51dd3517e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _colors: []
+  _Acolors: []
+  _Bcolors: []
 --- !u!4 &1333065491
 Transform:
   m_ObjectHideFlags: 0
@@ -2258,7 +2259,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028129541}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.744294, y: 4.5900016, z: -11}
+  m_LocalPosition: {x: -7.7442937, y: 4.590002, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 590046483}
