@@ -8,7 +8,6 @@ public class Jumper : MonoBehaviour
     //Altres classes
     private Rigidbody2D _rigidbody;
     private GroundChecker _groundChecker;
-    private PlayerInput _input;
 
     //Parametres del salt
     [SerializeField]
@@ -52,7 +51,6 @@ public class Jumper : MonoBehaviour
         //gravityDir = 1;
         _groundChecker = GetComponent<GroundChecker>();
         _rigidbody = GetComponent<Rigidbody2D>();
-        _input = GetComponent<PlayerInput>();
         _rigidbody.gravityScale = gravityDir;
     }
     private void Update()
