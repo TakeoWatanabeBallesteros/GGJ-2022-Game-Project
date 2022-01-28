@@ -58,7 +58,7 @@ public class PlayerAnimations : MonoBehaviour
         print(vector.x);
         animator.SetFloat("speed", Math.Abs(vector.x));
 
-        if ((dreta && Mathf.Sign(vector.x) < 0) || (!dreta && Mathf.Sign(vector.x) > 0))
+        if ((dreta && vector.x < 0) || (!dreta && vector.x > 0))
         {
              transform.Rotate(new Vector3(0, 180, 0));
              dreta = !dreta;
