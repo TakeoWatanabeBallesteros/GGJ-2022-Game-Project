@@ -27,6 +27,9 @@ public class Jumper : MonoBehaviour
     public bool peakReached;
     bool onGravityArea;
 
+    public Action onJump;
+    public Action onPeak;
+
     private Controls controls;
     private Controls Controls{
         get{
@@ -62,8 +65,9 @@ public class Jumper : MonoBehaviour
                 gravityDir = -gravityDir;
                 _rigidbody.gravityScale = gravityDir;
                 transform.Rotate(new Vector3(0, 180, 180));
-                peakReached = true;
             }
+            peakReached = true;
+            onPeak?.Invoke();
         }
         lastVelocityFrame = _rigidbody.velocity.y * gravityDir;
     }
@@ -104,6 +108,7 @@ public class Jumper : MonoBehaviour
         {
             timeStart = DateTime.Now;
             Jump();
+            onJump?.Invoke();
         }
     }
 
