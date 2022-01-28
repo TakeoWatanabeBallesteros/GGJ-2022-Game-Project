@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GroundChecker
+public class GroundChecker : MonoBehaviour
 {
     [SerializeField]
     Transform GroundCheckTransform;

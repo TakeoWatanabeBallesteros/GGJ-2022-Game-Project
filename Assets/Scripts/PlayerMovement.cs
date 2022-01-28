@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _input.MovementHorizontal * Speed);
+        _rigidbody.velocity = new Vector2(_input.MovementHorizontal * Speed, _rigidbody.velocity.y);
         _isMoving = _rigidbody.velocity.magnitude > 0.01f;
     }
 }

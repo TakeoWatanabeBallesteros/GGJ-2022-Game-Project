@@ -7,9 +7,7 @@ public class Jumper : MonoBehaviour
 {
     //Altres classes
     private Rigidbody2D _rigidbody;
-    public GroundChecker _groundChecker;
-    //[SerializeField]
-    //private GroundChecker _wallChecker;
+    private GroundChecker _groundChecker;
     private PlayerInput _input;
 
     //Parametres del salt
@@ -28,8 +26,7 @@ public class Jumper : MonoBehaviour
     public bool imJumping;
     public bool peakReached;
     bool onGravityArea;
-    //bool onHorizontalGravityArea;
-
+    
     private void OnDrawGizmos()
     {
         float y = transform.position.y + jumpHeight;
@@ -41,10 +38,10 @@ public class Jumper : MonoBehaviour
     void Awake()
     {
         onGravityArea = false;
-        //onHorizontalGravityArea = false;
         peakReached = false;
         imJumping = false;
         gravityDir = 1;
+        _groundChecker = GetComponent<GroundChecker>();
         _rigidbody = GetComponent<Rigidbody2D>();
         _input = GetComponent<PlayerInput>();
     }
@@ -66,8 +63,6 @@ public class Jumper : MonoBehaviour
     private void OnEnable()
     {
         _groundChecker.OnLanded += OnLanded;
-        //_wallChecker.OnLanded += OnWall;
-        //_wallChecker.LeftLand += LeftWall;
         _input.jumpStarted += OnJumpStarted;
         _input.jumpFinished += OnJumpFinished;
     }
@@ -75,8 +70,6 @@ public class Jumper : MonoBehaviour
     private void OnDisable()
     {
         _groundChecker.OnLanded -= OnLanded;
-        //_wallChecker.OnLanded -= OnWall;
-        //_wallChecker.OnLanded -= LeftWall;
         _input.jumpStarted -= OnJumpStarted;
         _input.jumpFinished -= OnJumpFinished;
     }
@@ -87,19 +80,6 @@ public class Jumper : MonoBehaviour
         peakReached = false;
         _rigidbody.gravityScale = gravityDir;
     }
-
-    //private void OnWall()
-    //{
-    //    imJumping = false;
-    //    peakReached = false;
-    //    _forceController.SetVerticalVelocity(0);
-    //    _rigidbody.gravityScale = 0.1f * _forceController.GetGravityDir();
-    //}
-    //
-    //private void LeftWall()
-    //{
-    //    _rigidbody.gravityScale = _forceController.GetGravityDir();
-    //}
 
     public void setJump()
     {
@@ -128,10 +108,6 @@ public class Jumper : MonoBehaviour
     {
         imJumping = true;
 
-        //if (_wallChecker.isGrounded && !_groundChecker.isGrounded)
-        //{
-        //    _rigidbody.gravityScale = gravityDir;
-        //}
         _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, GetVelocity());
         SetGravity();
     }
@@ -143,7 +119,7 @@ public class Jumper : MonoBehaviour
 
     bool CanJump()
     {
-        return _groundChecker.isGrounded; // || _wallChecker.isGrounded;
+        return _groundChecker.isGrounded;
     }
 
     void SetGravity()
