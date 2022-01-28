@@ -8,12 +8,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8102369159078885876, guid: 2fd287ce231d179408e029e0e610f873, type: 3}
+      propertyPath: colorIdx
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8102369159078885876, guid: 2fd287ce231d179408e029e0e610f873, type: 3}
       propertyPath: _background
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8102369159078885877, guid: 2fd287ce231d179408e029e0e610f873, type: 3}
       propertyPath: m_Name
-      value: VanishingPlatf_Bottom
+      value: VanishingPlatf_Bottom Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8102369159078885880, guid: 2fd287ce231d179408e029e0e610f873, type: 3}
       propertyPath: m_RootOrder
@@ -61,15 +65,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8102369159078885881, guid: 2fd287ce231d179408e029e0e610f873, type: 3}
       propertyPath: m_Color.b
-      value: 0.9372549
+      value: 0.40000004
       objectReference: {fileID: 0}
     - target: {fileID: 8102369159078885881, guid: 2fd287ce231d179408e029e0e610f873, type: 3}
       propertyPath: m_Color.g
-      value: 0.77254903
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8102369159078885881, guid: 2fd287ce231d179408e029e0e610f873, type: 3}
       propertyPath: m_Color.r
-      value: 0.60784316
+      value: 0.80392164
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fd287ce231d179408e029e0e610f873, type: 3}

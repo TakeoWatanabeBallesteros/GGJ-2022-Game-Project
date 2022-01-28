@@ -59,9 +59,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3686467375820201379, guid: 5ec90d814eae6884b8369ee685722518, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3686467375820201379, guid: 5ec90d814eae6884b8369ee685722518, type: 3}
+      propertyPath: m_Color.g
+      value: 0.40000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 3686467375820201379, guid: 5ec90d814eae6884b8369ee685722518, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6431373
+      objectReference: {fileID: 0}
     - target: {fileID: 3686467375820201382, guid: 5ec90d814eae6884b8369ee685722518, type: 3}
       propertyPath: m_Name
       value: PermanentPlatform_Bottom
+      objectReference: {fileID: 0}
+    - target: {fileID: 3686467375820201437, guid: 5ec90d814eae6884b8369ee685722518, type: 3}
+      propertyPath: colorIdx
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3686467375820201437, guid: 5ec90d814eae6884b8369ee685722518, type: 3}
       propertyPath: _background
