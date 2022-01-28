@@ -39,7 +39,6 @@ public class ColorManager : MonoBehaviour
         }
         foreach (ChangingColorPlatform platform in GameObject.FindObjectsOfType<ChangingColorPlatform>())
         {
-            platform.ChangeColor();
             platform.CheckColor();
         }
     }

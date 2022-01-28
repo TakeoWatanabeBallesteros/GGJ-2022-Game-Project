@@ -920,6 +920,7 @@ GameObject:
   - component: {fileID: 824809132}
   - component: {fileID: 824809131}
   - component: {fileID: 824809130}
+  - component: {fileID: 824809134}
   m_Layer: 6
   m_Name: Bot Obstacle 1
   m_TagString: Untagged
@@ -1039,6 +1040,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &824809134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824809129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4cc33f02c3d59f4ea2c3aa5550db070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colors:
+  - {r: 0.80392164, g: 1, b: 0.40000004, a: 1}
+  - {r: 0.6431373, g: 0.40000004, b: 1, a: 1}
+  _background: {fileID: 1858354221}
 --- !u!1 &897345574
 GameObject:
   m_ObjectHideFlags: 0
@@ -1736,6 +1753,7 @@ GameObject:
   - component: {fileID: 2081805246}
   - component: {fileID: 2081805245}
   - component: {fileID: 2081805244}
+  - component: {fileID: 2081805248}
   m_Layer: 6
   m_Name: Top Obstacle 1
   m_TagString: Untagged
@@ -1855,6 +1873,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2081805248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081805243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4cc33f02c3d59f4ea2c3aa5550db070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colors:
+  - {r: 0.6431373, g: 0.40000004, b: 1, a: 1}
+  - {r: 0.80392164, g: 1, b: 0.40000004, a: 1}
+  _background: {fileID: 550639365}
 --- !u!1 &2134774829
 GameObject:
   m_ObjectHideFlags: 0
