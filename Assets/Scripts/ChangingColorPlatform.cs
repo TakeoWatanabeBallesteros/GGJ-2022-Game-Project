@@ -8,6 +8,18 @@ public class ChangingColorPlatform : ColorBackground
     ColorBackground _background;
     Collider2D _collider;
 
+    private void OnEnable()
+    {
+        ColorManager.Instance.OnColorUpdate += UpdateColor;
+        ColorManager.Instance.OnColorSwitch += SwitchColor;
+    }
+
+    private void OnDisable()
+    {
+        ColorManager.Instance.OnColorUpdate -= UpdateColor;
+        ColorManager.Instance.OnColorSwitch -= SwitchColor;
+    }
+
     // Start is called before the first frame update
     protected override void Start()
     {

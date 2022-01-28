@@ -6,22 +6,20 @@ using UnityEngine;
 public class ColorManager : MonoBehaviour
 {
     [SerializeField]
-    private Color[] _colors;
+    private Color[] _Acolors;
+    [SerializeField]
+    private Color[] _Bcolors;
+    private Color[] _currentColors;
     [HideInInspector]
-    public Color[] colors { get { return _colors; } }
+    public Color[] currentColors { get { return _currentColors; } }
+    int currAColor;
+    int currBColor;
+    public Action<Color[]> OnColorUpdate;
+    public Action<Color[]> OnColorSwitch;
+    public Action OnColorSwitched;
 
     private static ColorManager _instance;
-    public static ColorManager Instance { get { return _instance; } }
-
-    private Controls controls;
-    private Controls Controls
-    {
-        get
-        {
-            if (controls != null) { return controls; }
-            return controls = new Controls();
-        }
-    }
+    public static ColorManager Instance { get { return _instance; } } 
 
     private void Awake()
     {
@@ -35,32 +33,40 @@ public class ColorManager : MonoBehaviour
         }
     }
 
+    private Controls controls;
+    private Controls Controls
+    {
+        get
+        {
+            if (controls != null) { return controls; }
+            return controls = new Controls();
+        }
+    }
 
     private void OnEnable()
     {
+        EnergyBall.OnEnergyBallCollected += ChangeColor;
         Controls.Scenario.SwitchColors.Enable();
-        Controls.Scenario.SwitchColors.performed += _ => ChangeColors();
+        Controls.Scenario.SwitchColors.performed += _ =>
+        {
+            OnColorSwitch?.Invoke(currentColors);
+            OnColorSwitched?.Invoke();
+        };
+        //Checkear si peta
     }
 
     private void OnDisable()
     {
         Controls.Scenario.SwitchColors.Disable();
-        Controls.Scenario.SwitchColors.performed -= _ => ChangeColors();
+        Controls.Scenario.SwitchColors.performed -= _ => OnColorSwitch?.Invoke(currentColors);
     }
 
-    private void ChangeColors()
+    public void ChangeColor(GameObject ob, bool top)
     {
-        foreach(ColorBackground bkgd in GameObject.FindObjectsOfType<ColorBackground>())
-        {
-            bkgd.ChangeColor();
-        }
-        foreach (StaticColorPlatform platform in GameObject.FindObjectsOfType<StaticColorPlatform>())
-        {
-            platform.CheckColor();
-        }
-        foreach (ChangingColorPlatform platform in GameObject.FindObjectsOfType<ChangingColorPlatform>())
-        {
-            platform.CheckColor();
-        }
+        if (top) currAColor++;
+        else currBColor++;
+        _currentColors[0] = _Acolors[currAColor];
+        _currentColors[1] = _Bcolors[currBColor];
+        OnColorUpdate?.Invoke(currentColors);
     }
 }
