@@ -17,6 +17,7 @@ public class Jumper : MonoBehaviour
     float timeToPeak;
     DateTime timeStart;
     //Parametres de la gravetat
+    [SerializeField]
     int gravityDir;
     [SerializeField]
     float gravityEffector;
@@ -26,6 +27,14 @@ public class Jumper : MonoBehaviour
     public bool imJumping;
     public bool peakReached;
     bool onGravityArea;
+
+    private Controls controls;
+    private Controls Controls{
+        get{
+            if(controls != null) {return controls;}
+            return controls = new Controls();
+        }
+    }
     
     private void OnDrawGizmos()
     {
@@ -40,10 +49,11 @@ public class Jumper : MonoBehaviour
         onGravityArea = false;
         peakReached = false;
         imJumping = false;
-        gravityDir = 1;
+        //gravityDir = 1;
         _groundChecker = GetComponent<GroundChecker>();
         _rigidbody = GetComponent<Rigidbody2D>();
         _input = GetComponent<PlayerInput>();
+        _rigidbody.gravityScale = gravityDir;
     }
     private void Update()
     {
@@ -63,15 +73,17 @@ public class Jumper : MonoBehaviour
     private void OnEnable()
     {
         _groundChecker.OnLanded += OnLanded;
-        _input.jumpStarted += OnJumpStarted;
-        _input.jumpFinished += OnJumpFinished;
+        Controls.Player.JumpStarted.Enable();
+        Controls.Player.JumpStarted.performed += ctx => OnJumpStarted();
+        Controls.Player.JumpStarted.canceled += ctx => OnJumpFinished();
     }
 
     private void OnDisable()
     {
         _groundChecker.OnLanded -= OnLanded;
-        _input.jumpStarted -= OnJumpStarted;
-        _input.jumpFinished -= OnJumpFinished;
+        Controls.Player.JumpStarted.Disable();
+        Controls.Player.JumpStarted.performed -= ctx => OnJumpStarted();
+        Controls.Player.JumpStarted.canceled -= ctx => OnJumpFinished();
     }
 
     private void OnLanded()
@@ -119,7 +131,7 @@ public class Jumper : MonoBehaviour
 
     bool CanJump()
     {
-        return _groundChecker.isGrounded;
+        return _groundChecker.isGrounded&&GetComponent<PlayerMovement>().CanMove;
     }
 
     void SetGravity()
