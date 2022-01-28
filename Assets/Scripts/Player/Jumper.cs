@@ -139,22 +139,6 @@ public class Jumper : MonoBehaviour
         _rigidbody.gravityScale = gravityDir * (-2 * jumpHeight / (timeToPeak * timeToPeak)) / Physics2D.gravity.y;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("gravityArea"))
-        {
-            onGravityArea = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("gravityArea"))
-        {
-            onGravityArea = false;
-        }
-    }
-
     private void _EnergyBall(GameObject obj, bool isTop){ 
         if (obj != gameObject){
             //Change param

@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class ChangingColorPlatform : ColorBackground
 {
@@ -11,23 +10,16 @@ public class ChangingColorPlatform : ColorBackground
 
     private void OnEnable()
     {
-        ColorManager.Instance.OnColorUpdate += UpdateColor;
-        ColorManager.Instance.OnColorSwitch += SwitchColor;
-        ColorManager.Instance.OnColorSwitched += CheckColor;
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        ColorManager.OnColorUpdate += UpdateColor;
+        ColorManager.OnColorSwitch += SwitchColor;
+        ColorManager.OnColorSwitched += CheckColor;
     }
 
     private void OnDisable()
     {
-        ColorManager.Instance.OnColorUpdate -= UpdateColor;
-        ColorManager.Instance.OnColorSwitch -= SwitchColor;
-        ColorManager.Instance.OnColorSwitched -= CheckColor;
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        Debug.Log("OnSceneLoaded: " + scene.name);
-        Debug.Log(mode);
+        ColorManager.OnColorUpdate -= UpdateColor;
+        ColorManager.OnColorSwitch -= SwitchColor;
+        ColorManager.OnColorSwitched -= CheckColor;
     }
 
     // Start is called before the first frame update

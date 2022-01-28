@@ -13,20 +13,21 @@ public class ColorBackground : MonoBehaviour
 
     private void OnEnable()
     {
-        ColorManager.Instance.OnColorUpdate += UpdateColor;
-        ColorManager.Instance.OnColorSwitch += SwitchColor;
+        ColorManager.OnColorUpdate += UpdateColor;
+        ColorManager.OnColorSwitch += SwitchColor;
     }
 
     private void OnDisable()
     {
-        ColorManager.Instance.OnColorUpdate -= UpdateColor;
-        ColorManager.Instance.OnColorSwitch -= SwitchColor;
+        ColorManager.OnColorUpdate -= UpdateColor;
+        ColorManager.OnColorSwitch -= SwitchColor;
     }
 
     // Start is called before the first frame update
     protected virtual void Start()
     {
         _renderer = GetComponent<SpriteRenderer>();
+        _renderer.color = ColorManager.Instance.CurrentColors[colorIdx];
     }
 
     protected void UpdateColor(Color[] colorArray)

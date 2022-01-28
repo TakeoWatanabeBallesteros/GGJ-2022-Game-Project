@@ -13,23 +13,29 @@ public class StaticColorPlatform : MonoBehaviour
 
     private void OnEnable()
     {
-        print(ColorManager.Instance.currentColors[0] == Color.black);
-        ColorManager.Instance.OnColorSwitched += CheckColor;
+        ColorManager.OnColorSwitched += CheckColor;
+        ColorManager.OnColorUpdate += UpdateColor;
     }
 
     private void OnDisable()
     {
-        ColorManager.Instance.OnColorSwitched -= CheckColor;
+        ColorManager.OnColorSwitched -= CheckColor;
+        ColorManager.OnColorUpdate -= UpdateColor;
     }
 
     private void Start()
     {
         _collider = GetComponent<Collider2D>();
         _renderer = GetComponent<SpriteRenderer>();
-        _renderer.color = ColorManager.Instance.currentColors[colorIdx];
+        _renderer.color = ColorManager.Instance.CurrentColors[colorIdx];
     }
 
-    public void CheckColor()
+    void UpdateColor(Color[] colorArray)
+    {
+        _renderer.color = colorArray[colorIdx];
+    }
+
+    void CheckColor()
     {
        _collider.enabled = _background.myColor != _renderer.color;
     }
