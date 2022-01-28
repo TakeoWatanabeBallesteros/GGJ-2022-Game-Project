@@ -5,6 +5,14 @@ using UnityEngine;
 
 public class ColorManager : MonoBehaviour
 {
+    [SerializeField]
+    private Color[] _colors;
+    [HideInInspector]
+    public Color[] colors { get { return _colors; } }
+
+    private static ColorManager _instance;
+    public static ColorManager Instance { get { return _instance; } }
+
     private Controls controls;
     private Controls Controls
     {
@@ -14,6 +22,19 @@ public class ColorManager : MonoBehaviour
             return controls = new Controls();
         }
     }
+
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+    }
+
 
     private void OnEnable()
     {
