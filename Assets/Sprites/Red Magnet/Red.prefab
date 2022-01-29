@@ -222,6 +222,9 @@ MonoBehaviour:
   animator: {fileID: 2522739917380717661}
   particleOne: {fileID: 2682995918456475330, guid: 9b28d3e3f3e21cc41a779bfb207b1c29, type: 3}
   particleTwo: {fileID: 2226645668289966868, guid: 10054e97ae0724d46887a6a0a8658e34, type: 3}
+  PowerUp: {fileID: 1344457166417818, guid: 0310b8628b5599c4295215fedba1a232, type: 3}
+  Dust: {fileID: 1661115660855406580, guid: bea40e7f00f2b6549a3931490c5c0ad0, type: 3}
+  Walk: {fileID: 0}
 --- !u!1 &2522739918003512911
 GameObject:
   m_ObjectHideFlags: 0
