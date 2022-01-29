@@ -89,7 +89,7 @@ public class PlayerAnimations : MonoBehaviour
         animator.SetBool("isFalling", true);
     }
 
-    void Electrocuted(GameObject obj, bool num)
+    void Electrocuted(GameObject obj, bool condicio, float num)
     {
         if(obj == this.gameObject)
         {
