@@ -491,9 +491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b631b82997f5882429edcf3eadd3b831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colors:
-  - {r: 0.60784316, g: 0.77254903, b: 0.9372549, a: 1}
-  - {r: 0.4745098, g: 0.33333334, b: 0.68235296, a: 1}
+  colorIdx: 0
 --- !u!1 &590046482
 GameObject:
   m_ObjectHideFlags: 3
@@ -1586,6 +1584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a0b45f53ecfb624fac7e51dd3517e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _colors: []
 --- !u!4 &1333065491
 Transform:
   m_ObjectHideFlags: 0
@@ -2028,9 +2027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b631b82997f5882429edcf3eadd3b831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colors:
-  - {r: 0.4745098, g: 0.33333334, b: 0.68235296, a: 1}
-  - {r: 0.60784316, g: 0.77254903, b: 0.9372549, a: 1}
+  colorIdx: 0
 --- !u!1001 &1912599945
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: ba47cc206b110aa47a9fd29fcac68c62
   - enabled: 1
-    path: Assets/Scenes/GAME.unity
-    guid: 3a686a66f749285469b8af19006fc304
+    path: Assets/Scenes/Test Audio.unity
+    guid: 430ca2583f9e6c541bf2d9e7b4a3a51e
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: d9f6e1aa83df4bd45a6af76cfa184c56
+  - enabled: 0
+    path: Assets/Scenes/GAME.unity
+    guid: 3a686a66f749285469b8af19006fc304
   m_configObjects: {}
