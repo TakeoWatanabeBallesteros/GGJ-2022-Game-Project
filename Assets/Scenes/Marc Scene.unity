@@ -211,10 +211,10 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.99, y: 6.7}
+  m_Size: {x: 6.737544, y: 7.1800237}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &737092281
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2173fcde06477d2459fb9240068863b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 10
+  Speed: 20
   _isMoving: 0
 --- !u!114 &737092283
 MonoBehaviour:
@@ -259,8 +259,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c796a61a488887f4d961e56d531b0161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpHeight: 10
-  timeToPeak: 4
+  jumpHeight: 20
+  timeToPeak: 1
   gravityDir: 1
   gravityEffector: 1
   imJumping: 0
@@ -300,8 +300,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.99, y: 6.7}
-    newSize: {x: 3.99, y: 6.7}
+    oldSize: {x: 6.737544, y: 7.1800237}
+    newSize: {x: 6.737544, y: 7.1800237}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -505,7 +505,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15.52
+  orthographic size: 17.95
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
