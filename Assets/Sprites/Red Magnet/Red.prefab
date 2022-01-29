@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2522739917380717652}
   - component: {fileID: 2522739917380717655}
   - component: {fileID: 2522739917380717653}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.09414172}
+  m_Offset: {x: 0, y: 0.37}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -206,7 +206,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.99, y: 6.5117164}
+  m_Size: {x: 3.99, y: 5.54}
   m_EdgeRadius: 0
 --- !u!114 &2522739917380717653
 MonoBehaviour:
@@ -221,8 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2522739917380717661}
-  particleOne: {fileID: 2682995918456475330, guid: 9b28d3e3f3e21cc41a779bfb207b1c29, type: 3}
-  particleTwo: {fileID: 2226645668289966868, guid: 10054e97ae0724d46887a6a0a8658e34, type: 3}
+  particleOne: {fileID: 227997894207114768, guid: 63b1268b1d268ca429ac9c04af0411a3, type: 3}
   PowerUp: {fileID: 1344457166417818, guid: 0310b8628b5599c4295215fedba1a232, type: 3}
   Dust: {fileID: 7063573062483983395, guid: bea40e7f00f2b6549a3931490c5c0ad0, type: 3}
   Walk: {fileID: 6558906257849547717}

@@ -16,8 +16,6 @@ public class PlayerAnimations : MonoBehaviour
     [SerializeField]
     GameObject particleOne;
     [SerializeField]
-    GameObject particleTwo;
-    [SerializeField]
     GameObject PowerUp;
     [SerializeField]
     GameObject Dust;
@@ -92,11 +90,11 @@ public class PlayerAnimations : MonoBehaviour
 
         if(gameObject.layer == LayerMask.NameToLayer("Player_2"))
         {
-            Instantiate(Dust, new Vector3(transform.position.x, transform.position.y - 2.5f, transform.position.z - 0.5f), Quaternion.identity, transform);
+            Instantiate(Dust, new Vector3(transform.position.x, transform.position.y + 2.5f, transform.position.z - 0.5f), Quaternion.identity, transform);
         }
         else
         {
-            Instantiate(Dust, new Vector3(transform.position.x, transform.position.y + 2.5f, transform.position.z - 0.5f), Quaternion.identity, transform);
+            Instantiate(Dust, new Vector3(transform.position.x, transform.position.y - 2.5f, transform.position.z - 0.5f), Quaternion.identity, transform);
         }
     }
 
@@ -118,7 +116,6 @@ public class PlayerAnimations : MonoBehaviour
         if(obj == this.gameObject)
         {
             Instantiate(particleOne, new Vector3(transform.position.x, transform.position.y, transform.position.z - 0.5f), Quaternion.identity, transform);
-            Instantiate(particleTwo, new Vector3(transform.position.x, transform.position.y - 2.5f, transform.position.z - 1f), Quaternion.EulerAngles(Mathf.Deg2Rad*-90, 0, 0), transform);
         }
         /*else
         {
