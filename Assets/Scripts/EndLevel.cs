@@ -10,7 +10,6 @@ public class EndLevel : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //SceneManager.LoadSceneAsync(nextLvl);
-        SceneManager.LoadScene(nextLvl);
+        SceneManager.LoadSceneAsync(nextLvl);
     }
 }
