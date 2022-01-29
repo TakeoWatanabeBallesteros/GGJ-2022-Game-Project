@@ -28,12 +28,14 @@ public class PlayerMovement : MonoBehaviour
         Controls.Player.Move.Enable();
         Controls.Player.Move.performed += ctx => direction = ctx.ReadValue<Vector2>();
         Controls.Player.Move.canceled += ctx => direction = Vector2.zero;
+        EnergyBall.OnEnergyBallCollected += _EnergyBall;
     }
 
     void OnDisable() {
         Controls.Player.Move.Disable();
         Controls.Player.Move.performed -= ctx => direction = ctx.ReadValue<Vector2>();
         Controls.Player.Move.canceled -= ctx => direction = Vector2.zero;
+        EnergyBall.OnEnergyBallCollected -= _EnergyBall;
     }
 
     void Start()
@@ -58,5 +60,11 @@ public class PlayerMovement : MonoBehaviour
     public void DisableMovement(){
         Controls.Player.Move.Disable();
         _canMove = false;
+    }
+
+    private void _EnergyBall(GameObject obj, bool isTop, float phisicInceaseFactor){ 
+        if (obj != gameObject){
+            //Change param
+        }
     }
 }

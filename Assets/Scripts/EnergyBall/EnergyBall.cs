@@ -6,8 +6,10 @@ public class EnergyBall : MonoBehaviour
 {
     [SerializeField]
     bool _isTop;
+    [SerializeField]
+    float phisicInceaseFactor;
     public bool IsTop { get { return _isTop; } }
-    public delegate void EnergyBallCollected(GameObject obj, bool IsTop);
+    public delegate void EnergyBallCollected(GameObject obj, bool IsTop, float incr);
     public static EnergyBallCollected OnEnergyBallCollected;
     SpriteRenderer _renderer;
     Collider2D _collider;
@@ -29,7 +31,7 @@ public class EnergyBall : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.layer == LayerMask.NameToLayer ("Player_1") || other.gameObject.layer == LayerMask.NameToLayer ("Player_2")){
-            OnEnergyBallCollected?.Invoke(other.gameObject, IsTop);
+            OnEnergyBallCollected?.Invoke(other.gameObject, IsTop, phisicInceaseFactor);
             Destroy(gameObject);
         }
     }

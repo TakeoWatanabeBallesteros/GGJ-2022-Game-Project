@@ -72,6 +72,7 @@ public class ColorManager : MonoBehaviour
 
     private void OnDisable()
     {
+        EnergyBall.OnEnergyBallCollected -= ChangeColor;
         Controls.Scenario.SwitchColors.Disable();
         Controls.Scenario.SwitchColors.performed -= _ =>
         {
@@ -110,7 +111,7 @@ public class ColorManager : MonoBehaviour
         OnColorUpdate?.Invoke(CurrentColors);
     }
 
-    public void ChangeColor(GameObject obj, bool top)
+    public void ChangeColor(GameObject obj, bool top, float phisicInceaseFactor)
     {
         if (top) currBColor++;
         else currAColor++;

@@ -144,7 +144,7 @@ public class Jumper : MonoBehaviour
         _rigidbody.gravityScale = gravityDir * (-2 * jumpHeight / (timeToPeak * timeToPeak)) / Physics2D.gravity.y;
     }
 
-    private void _EnergyBall(GameObject obj, bool isTop){ 
+    private void _EnergyBall(GameObject obj, bool isTop, float phisicInceaseFactor){ 
         if (obj != gameObject){
             //Change param
         }
