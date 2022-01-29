@@ -12,11 +12,27 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     GameObject player2;
     static int ballsCollected;
+
+    private static ColorManager _instance;
+    public static ColorManager Instance => _instance;
+    
     private Controls controls;
     private Controls Controls{
         get{
             if(controls != null) {return controls;}
             return controls = new Controls();
+        }
+    }
+
+    private void Awake() {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            _instance = gameObject.GetComponent<ColorManager>();
+            DontDestroyOnLoad(gameObject);
         }
     }
 
