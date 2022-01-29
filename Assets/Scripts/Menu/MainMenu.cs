@@ -16,7 +16,7 @@ public class MainMenu : MonoBehaviour
     public void PlayCreditScene()
     {
         Debug.Log("Scene CREDITS");
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Credits");
         
         FindObjectOfType<AudioManager>().Play("Credits");
     }
