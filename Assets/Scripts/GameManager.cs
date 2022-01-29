@@ -13,8 +13,8 @@ public class GameManager : MonoBehaviour
     GameObject player2;
     static int ballsCollected;
 
-    private static ColorManager _instance;
-    public static ColorManager Instance => _instance;
+    private static GameManager _instance;
+    public static GameManager Instance => _instance;
     
     private Controls controls;
     private Controls Controls{
@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            _instance = gameObject.GetComponent<ColorManager>();
+            _instance = gameObject.GetComponent<GameManager>();
             DontDestroyOnLoad(gameObject);
         }
     }
