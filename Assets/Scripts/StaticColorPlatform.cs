@@ -13,26 +13,37 @@ public class StaticColorPlatform : MonoBehaviour
 
     private void OnEnable()
     {
+        ColorManager.OnColorSwitch += SwitchColor;
         ColorManager.OnColorSwitched += CheckColor;
         ColorManager.OnColorUpdate += UpdateColor;
     }
 
     private void OnDisable()
     {
+        ColorManager.OnColorSwitch -= SwitchColor;
         ColorManager.OnColorSwitched -= CheckColor;
         ColorManager.OnColorUpdate -= UpdateColor;
+
+    }
+
+    private void Awake() {
+        
+        _collider = GetComponent<Collider2D>();
+        _renderer = GetComponent<SpriteRenderer>();
     }
 
     private void Start()
     {
-        _collider = GetComponent<Collider2D>();
-        _renderer = GetComponent<SpriteRenderer>();
         _renderer.color = ColorManager.Instance.CurrentColors[colorIdx];
     }
 
     void UpdateColor(Color[] colorArray)
     {
         _renderer.color = colorArray[colorIdx];
+    }
+    void SwitchColor()
+    {
+        colorIdx = (colorIdx + 1) % 2;
     }
 
     void CheckColor()

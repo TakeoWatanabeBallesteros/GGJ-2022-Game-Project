@@ -11,19 +11,20 @@ public class ChangingColorPlatform : ColorBackground
     private void OnEnable()
     {
         ColorManager.OnColorUpdate += UpdateColor;
-        ColorManager.OnColorSwitch += SwitchColor;
     }
 
     private void OnDisable()
     {
         ColorManager.OnColorUpdate -= UpdateColor;
-        ColorManager.OnColorSwitch -= SwitchColor;
+    }
+    private void Awake() {
+        
+        _collider = GetComponent<Collider2D>();
     }
 
     // Start is called before the first frame update
     protected override void Start()
     {
         base.Start();
-        _collider = GetComponent<Collider2D>();
     }
 }

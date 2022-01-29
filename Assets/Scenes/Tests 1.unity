@@ -855,7 +855,7 @@ MonoBehaviour:
   m_BiasY: 0
   m_CenterOnActivate: 1
   m_GroupFramingMode: 2
-  m_AdjustmentMode: 0
+  m_AdjustmentMode: 2
   m_GroupFramingSize: 0.2
   m_MaxDollyIn: 5000
   m_MaxDollyOut: 5000
@@ -1537,9 +1537,9 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 40
-  orthographic: 1
-  orthographic size: 10.695009
+  field of view: 60
+  orthographic: 0
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1563,7 +1563,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 903735463}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.7442937, y: 4.590002, z: -11}
+  m_LocalPosition: {x: -7.7442937, y: 4.590002, z: -10.60425}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1598,11 +1598,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 950128590}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4cc33f02c3d59f4ea2c3aa5550db070, type: 3}
+  m_Script: {fileID: 11500000, guid: b631b82997f5882429edcf3eadd3b831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   colorIdx: 0
-  _background: {fileID: 1858354221}
 --- !u!50 &950128592
 Rigidbody2D:
   serializedVersion: 4
@@ -2225,7 +2224,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 292933940}
   m_Lens:
-    FieldOfView: 40
+    FieldOfView: 91
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -2247,7 +2246,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028129541}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.7442937, y: 4.590002, z: -11}
+  m_LocalPosition: {x: -7.7442937, y: 4.590002, z: -10.60425}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 590046483}
@@ -2395,11 +2394,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2081805243}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4cc33f02c3d59f4ea2c3aa5550db070, type: 3}
+  m_Script: {fileID: 11500000, guid: b631b82997f5882429edcf3eadd3b831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   colorIdx: 1
-  _background: {fileID: 550639365}
 --- !u!1 &2134774829
 GameObject:
   m_ObjectHideFlags: 0

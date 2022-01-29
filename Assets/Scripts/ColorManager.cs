@@ -15,9 +15,11 @@ public class ColorManager : MonoBehaviour
     public Color[] CurrentColors { get { return _currentColors; } }
     int currAColor = 0;
     int currBColor = 0;
+    bool SwitchColor = false;
+
     public static Action<Color[]> OnColorUpdate;
-    public static Action<Color[]> OnColorSwitch;
     public static Action OnColorSwitched;
+    public static Action OnColorSwitch;
 
     private static ColorManager _instance;
     public static ColorManager Instance => _instance;
@@ -49,14 +51,21 @@ public class ColorManager : MonoBehaviour
         Controls.Scenario.SwitchColors.Enable();
         Controls.Scenario.SwitchColors.performed += _ =>
         {
-            OnColorSwitch?.Invoke(CurrentColors);
+            SwitchColor = !SwitchColor;
+            OnColorSwitch?.Invoke();
+            SetColors();
             OnColorSwitched?.Invoke();
         };
         //Checkear si peta
         SceneManager.sceneLoaded += OnSceneLoaded;
-        
-        _currentColors[0] = _Acolors[currAColor];
-        _currentColors[1] = _Bcolors[currBColor];
+        if(SwitchColor){//Top = B / Bot = A
+            _currentColors[1] = _Acolors[currAColor];
+            _currentColors[0] = _Bcolors[currBColor];
+        }
+        else{//Bottom = B / Bot = A
+            _currentColors[0] = _Acolors[currAColor];
+            _currentColors[1] = _Bcolors[currBColor];
+        }
     }
 
     private void OnDisable()
@@ -64,23 +73,45 @@ public class ColorManager : MonoBehaviour
         Controls.Scenario.SwitchColors.Disable();
         Controls.Scenario.SwitchColors.performed -= _ =>
         {
-            OnColorSwitch?.Invoke(CurrentColors);
+            SwitchColor = !SwitchColor;
+            OnColorSwitch?.Invoke();
+            SetColors();
             OnColorSwitched?.Invoke();
         };
         SceneManager.sceneLoaded -= OnSceneLoaded;
+        if(SwitchColor){//Top = B / Bot = A
+            _currentColors[1] = _Acolors[currAColor];
+            _currentColors[0] = _Bcolors[currBColor];
+        }
+        else{//Bottom = B / Bot = A
+            _currentColors[0] = _Acolors[currAColor];
+            _currentColors[1] = _Bcolors[currBColor];
+        }
     }
    
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        //OnColorSwitched?.Invoke();
+        if(SwitchColor) OnColorSwitch?.Invoke();
+        SetColors();
+        OnColorSwitched?.Invoke();
+    }
+
+    void SetColors(){ 
+        if(SwitchColor){//Top = B / Bot = A
+            _currentColors[1] = _Acolors[currAColor];
+            _currentColors[0] = _Bcolors[currBColor];
+        }
+        else{//Bottom = B / Bot = A
+            _currentColors[0] = _Acolors[currAColor];
+            _currentColors[1] = _Bcolors[currBColor];
+        }
+        OnColorUpdate?.Invoke(CurrentColors);
     }
 
     public void ChangeColor(GameObject obj, bool top)
     {
         if (top) currBColor++;
         else currAColor++;
-        _currentColors[0] = _Acolors[currAColor];
-        _currentColors[1] = _Bcolors[currBColor];
-        OnColorUpdate?.Invoke(CurrentColors);
+        SetColors();
     }
 }
