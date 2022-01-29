@@ -8,7 +8,7 @@ public class EndLevel : MonoBehaviour
     [SerializeField]
     int nextLvl;
     [SerializeField]
-    float transitionTime;
+    float transitionTime = 1.0f;
 
     [SerializeField]
     Animator transition;
@@ -23,6 +23,6 @@ public class EndLevel : MonoBehaviour
     IEnumerator LoadLevel(){
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(transitionTime);
-        SceneManager.LoadSceneAsync(nextLvl);
+        SceneManager.LoadScene(nextLvl);
     }
 }
