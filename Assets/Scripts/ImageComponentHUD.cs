@@ -4,25 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ImageComponentHUD : MonoBehaviour
-{
+{  
+    [SerializeField]
     Image myImageComponent; // Image component attached to this gameobject
 
     public Sprite originalSprite;
     public Sprite pressedSprite;
 
+  
     ColorManager colorManager;
 
     private static ImageComponentHUD _instance;
     public static ImageComponentHUD Instance => _instance;
-
-    private Controls controls;
-    private Controls Controls{
-        get{
-            if(controls != null) {return controls;}
-            return controls = new Controls();
-        }
-    }
-
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -36,12 +29,17 @@ public class ImageComponentHUD : MonoBehaviour
         }
     }
 
+    private void Start() {
+        if(colorManager._SwitchColor){//if true is on
+                myImageComponent.sprite = pressedSprite;
+           }else{myImageComponent.sprite = originalSprite;}
+    }
+
      private void OnEnable()
     {
         GameObject CM = GameObject.FindWithTag("Color Manager");
         colorManager = CM.GetComponent<ColorManager>();
-        Controls.Scenario.SwitchColors.Enable();
-        Controls.Scenario.SwitchColors.performed += _ =>
+        ColorManager.OnColorSwitch +=()=>
         {
            if(colorManager._SwitchColor){//if true is on
                 myImageComponent.sprite = pressedSprite;
@@ -51,15 +49,12 @@ public class ImageComponentHUD : MonoBehaviour
 
     private void OnDisable()
     {
-        Controls.Scenario.SwitchColors.Disable();
-        Controls.Scenario.SwitchColors.performed -= _ =>
+        ColorManager.OnColorSwitch +=()=>
         {
-            
+           if(colorManager._SwitchColor){//if true is on
+                myImageComponent.sprite = pressedSprite;
+           }else{myImageComponent.sprite = originalSprite;}
         };
-    }
-    void Start() 
-    {
-        myImageComponent = GetComponent<Image>();
     }
     
 }
