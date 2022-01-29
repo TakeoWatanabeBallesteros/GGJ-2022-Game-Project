@@ -1584,8 +1584,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a0b45f53ecfb624fac7e51dd3517e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Acolors: []
-  _Bcolors: []
+  _Acolors:
+  - {r: 1, g: 0.40904054, b: 0, a: 0}
+  - {r: 0.7139801, g: 1, b: 0, a: 0}
+  _Bcolors:
+  - {r: 0, g: 1, b: 0.6650796, a: 0}
+  - {r: 0, g: 0.5706756, b: 1, a: 0}
 --- !u!4 &1333065491
 Transform:
   m_ObjectHideFlags: 0
