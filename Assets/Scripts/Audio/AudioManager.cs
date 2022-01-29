@@ -6,9 +6,13 @@ using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
+    [SerializeField] private AudioMixerGroup musicMixerGroup;
+    [SerializeField] private AudioMixerGroup soundEffectsMixerGroup;
+
     public Sound[] sounds;
     public static AudioManager instance;
 
+   
     public string ambient;
     public string music;
     // Start is called before the first frame update
@@ -30,6 +34,18 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
+
+           switch(s.audioType)
+            {
+                case Sound.AudioTypes.soundEffect:
+                    s.source.outputAudioMixerGroup = musicMixerGroup;
+                    break;
+                case Sound.AudioTypes.music:
+                    s.source.outputAudioMixerGroup = soundEffectsMixerGroup;
+                    break;
+                default:
+                    break;
+            }
         }
     }
      void Start()
@@ -51,5 +67,13 @@ public class AudioManager : MonoBehaviour
        
         s.source.Play();
     }
-    
+
+    public void UpdateMixerVolume()
+    {
+        musicMixerGroup.audioMixer.SetFloat("Music Volume", Mathf.Log10(AudioOptionsManager.musicVolume) * 20);
+        musicMixerGroup.audioMixer.SetFloat("Music Volume 2", Mathf.Log10(AudioOptionsManager.musicVolume) * 20);
+        soundEffectsMixerGroup.audioMixer.SetFloat("Music Volume", Mathf.Log10(AudioOptionsManager.soundEffectVolume) * 20);
+        soundEffectsMixerGroup.audioMixer.SetFloat("Music Volume 2", Mathf.Log10(AudioOptionsManager.soundEffectVolume) * 20);
+    }
+
 }
