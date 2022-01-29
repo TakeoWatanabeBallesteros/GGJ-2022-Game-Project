@@ -79,6 +79,7 @@ public class Jumper : MonoBehaviour
         Controls.Player.JumpStarted.performed += ctx => OnJumpStarted();
         Controls.Player.JumpStarted.canceled += ctx => OnJumpFinished();
         EnergyBall.OnEnergyBallCollected += _EnergyBall;
+        SetGravity();
     }
 
     private void OnDisable()
