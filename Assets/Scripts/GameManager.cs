@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     GameObject player1;
     [SerializeField]
     GameObject player2;
+    static int ballsCollected;
     private Controls controls;
     private Controls Controls{
         get{
@@ -22,14 +23,20 @@ public class GameManager : MonoBehaviour
     void OnEnable() {
         //Controls.Player.SwtichPlayer.Enable();
         Controls.Player.SwtichPlayer.performed += _ => SwitchPlayer();
+        EnergyBall.OnEnergyBallCollected += BallsCollected;
     }
 
     void OnDisable() {
         Controls.Player.SwtichPlayer.Disable();
         Controls.Player.SwtichPlayer.performed -= _ => SwitchPlayer();
+        EnergyBall.OnEnergyBallCollected -= BallsCollected;
     }
     private void Start() {
         //SwitchPlayer();
+    }
+
+    void BallsCollected(GameObject obj, bool IsTop, float incr){ 
+        ballsCollected++;
     }
     void SwitchPlayer(){
         if (player1.GetComponent<PlayerMovement>().CanMove){
