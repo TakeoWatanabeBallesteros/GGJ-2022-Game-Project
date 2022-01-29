@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColorBackground : MonoBehaviour
+public class ColorChanginElement : MonoBehaviour
 {
     ColorManager Instance;
     public Color myColor => _renderer.color;
