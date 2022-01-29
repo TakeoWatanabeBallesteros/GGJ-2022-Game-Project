@@ -21,8 +21,11 @@ public class PlayerAnimations : MonoBehaviour
     GameObject PowerUp;
     [SerializeField]
     GameObject Dust;
+    [SerializeField]
+    ParticleSystem Walk;
     GameObject player;
 
+    bool isMoving;
 
     private Controls Controls
     {
@@ -37,6 +40,7 @@ public class PlayerAnimations : MonoBehaviour
 
     private void Awake()
     {
+        StopWalk();
         dreta = true;
         rb = GetComponent<Rigidbody2D>();
         jump = GetComponent<Jumper>();
@@ -48,6 +52,7 @@ public class PlayerAnimations : MonoBehaviour
     {
         Controls.Player.Move.Enable();
         Controls.Player.Move.performed += ctx=> Speed(ctx.ReadValue<Vector2>());
+        Controls.Player.Move.canceled += ctx => StopWalk();
         jump.onJump += Jump;
         groundCheck.OnLanded += JumpEnded;
         jump.onPeak += Falling;
@@ -58,7 +63,7 @@ public class PlayerAnimations : MonoBehaviour
     {
         Controls.Player.Move.Disable();
         Controls.Player.Move.performed -= ctx => Speed(ctx.ReadValue<Vector2>());
-        //Controls.Player.Move.canceled -= ctx => StopWalk();
+        Controls.Player.Move.canceled -= ctx => StopWalk();
         jump.onJump -= Jump;
         groundCheck.OnLanded -= JumpEnded;
         jump.onPeak -= Falling;
@@ -67,6 +72,8 @@ public class PlayerAnimations : MonoBehaviour
 
     public void Speed(Vector2 vector)
     {
+        isMoving = true;
+        Walk.Play();
         print(vector.x);
         animator.SetFloat("speed", Math.Abs(vector.x));
 
@@ -79,6 +86,7 @@ public class PlayerAnimations : MonoBehaviour
 
     void Jump()
     {
+        Walk.Stop();
         animator.SetBool("isJumping", true);
         animator.SetBool("isFalling", false);
 
@@ -94,6 +102,7 @@ public class PlayerAnimations : MonoBehaviour
 
     void JumpEnded()
     {
+        if(isMoving) Walk.Play();
         animator.SetBool("isJumping", false);
         animator.SetBool("isFalling", false);
     }
@@ -122,5 +131,11 @@ public class PlayerAnimations : MonoBehaviour
                 Instantiate(PowerUp, new Vector3(transform.position.x, transform.position.y - 2.5f, transform.position.z - 1f), Quaternion.EulerAngles(Mathf.Deg2Rad * -90, 0, 0), transform);
             }
         }*/
+    }
+
+    void StopWalk()
+    {
+        isMoving = false;
+        Walk.Stop();
     }
 }
