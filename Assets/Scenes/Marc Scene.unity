@@ -214,7 +214,7 @@ SpriteRenderer:
   m_Size: {x: 3.99, y: 6.7}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &737092281
@@ -259,8 +259,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c796a61a488887f4d961e56d531b0161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpHeight: 10
-  timeToPeak: 4
+  jumpHeight: 5
+  timeToPeak: 0.5
   gravityDir: 1
   gravityEffector: 1
   imJumping: 0
