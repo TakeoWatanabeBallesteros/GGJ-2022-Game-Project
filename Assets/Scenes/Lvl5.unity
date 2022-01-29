@@ -2335,7 +2335,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 903735463}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.099998, y: 4.5512233, z: -31.272196}
+  m_LocalPosition: {x: -18.099998, y: 4.5512233, z: -31.272184}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3662,7 +3662,7 @@ GameObject:
   - component: {fileID: 1333065490}
   m_Layer: 0
   m_Name: ColorManager
-  m_TagString: Untagged
+  m_TagString: Color Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5035,7 +5035,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028129541}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.099998, y: 4.5512233, z: -31.272196}
+  m_LocalPosition: {x: -18.099998, y: 4.5512233, z: -31.272184}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 590046483}
