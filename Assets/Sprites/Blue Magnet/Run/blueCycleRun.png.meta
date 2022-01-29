@@ -1,0 +1,444 @@
+fileFormatVersion: 2
+guid: f3eb1a94f0084fe4484df0c487598193
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2980639957580814304
+    second: blueCycleRun_0
+  - first:
+      213: 6260159848016196037
+    second: blueCycleRun_1
+  - first:
+      213: -552367037495534853
+    second: blueCycleRun_2
+  - first:
+      213: -5811263509577932940
+    second: blueCycleRun_3
+  - first:
+      213: -3077187365367633346
+    second: blueCycleRun_4
+  - first:
+      213: -5434129597548331897
+    second: blueCycleRun_5
+  - first:
+      213: 2259870020597528328
+    second: blueCycleRun_6
+  - first:
+      213: 1510525477234510008
+    second: blueCycleRun_7
+  - first:
+      213: -7356775324673157363
+    second: blueCycleRun_8
+  - first:
+      213: 2016436981043151483
+    second: blueCycleRun_9
+  - first:
+      213: 1692834150403140383
+    second: blueCycleRun_10
+  - first:
+      213: 7613025714032247850
+    second: blueCycleRun_11
+  - first:
+      213: 5712448687280441306
+    second: blueCycleRun_12
+  - first:
+      213: -5928865970003218046
+    second: blueCycleRun_13
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: blueCycleRun_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 639.7143
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e790f2df3c5d5920800000000000000
+      internalID: 2980639957580814304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCycleRun_1
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 0
+        width: 639.7143
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c13b2ac63e80e650800000000000000
+      internalID: 6260159848016196037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCycleRun_2
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 0
+        width: 639.7143
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa91702b199558f0800000000000000
+      internalID: -552367037495534853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCycleRun_3
+      rect:
+        serializedVersion: 2
+        x: 1917
+        y: 0
+        width: 639.7143
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47fda6f90ae3a5fa0800000000000000
+      internalID: -5811263509577932940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCycleRun_4
+      rect:
+        serializedVersion: 2
+        x: 2556
+        y: 0
+        width: 639.7143
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3a21f31562ab45d0800000000000000
+      internalID: -3077187365367633346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCycleRun_5
+      rect:
+        serializedVersion: 2
+        x: 3195
+        y: 0
+        width: 639.7143
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78cf1ba1ce71694b0800000000000000
+      internalID: -5434129597548331897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCycleRun_6
+      rect:
+        serializedVersion: 2
+        x: 3834
+        y: 0
+        width: 639.7143
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80735487fcbac5f10800000000000000
+      internalID: 2259870020597528328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCycleRun_7
+      rect:
+        serializedVersion: 2
+        x: 4473
+        y: 0
+        width: 639.7143
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b88dbe1be676f410800000000000000
+      internalID: 1510525477234510008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCycleRun_8
+      rect:
+        serializedVersion: 2
+        x: 5112
+        y: 0
+        width: 639.7143
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d075f70f1db77e990800000000000000
+      internalID: -7356775324673157363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCycleRun_9
+      rect:
+        serializedVersion: 2
+        x: 5751
+        y: 0
+        width: 639.7143
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72c90f20c2dbfb10800000000000000
+      internalID: 2016436981043151483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCycleRun_10
+      rect:
+        serializedVersion: 2
+        x: 6390
+        y: 0
+        width: 639.7143
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1bed66d0b72e7710800000000000000
+      internalID: 1692834150403140383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCycleRun_11
+      rect:
+        serializedVersion: 2
+        x: 7029
+        y: 0
+        width: 639.7143
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a248ec62d86e6a960800000000000000
+      internalID: 7613025714032247850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCycleRun_12
+      rect:
+        serializedVersion: 2
+        x: 7668
+        y: 0
+        width: 639.7143
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad74ff2b0d1b64f40800000000000000
+      internalID: 5712448687280441306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blueCycleRun_13
+      rect:
+        serializedVersion: 2
+        x: 8307
+        y: 0
+        width: 639.7143
+        height: 677
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2817e0110df68bda0800000000000000
+      internalID: -5928865970003218046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

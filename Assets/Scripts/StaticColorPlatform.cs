@@ -11,14 +11,42 @@ public class StaticColorPlatform : MonoBehaviour
     SpriteRenderer _renderer;
     Collider2D _collider;
 
-    private void Start()
+    private void OnEnable()
     {
-        _collider = GetComponent<Collider2D>();
-        _renderer = GetComponent<SpriteRenderer>();
-        _renderer.color = ColorManager.Instance.colors[colorIdx];
+        ColorManager.OnColorSwitch += SwitchColor;
+        ColorManager.OnColorSwitched += CheckColor;
+        ColorManager.OnColorUpdate += UpdateColor;
     }
 
-    public void CheckColor()
+    private void OnDisable()
+    {
+        ColorManager.OnColorSwitch -= SwitchColor;
+        ColorManager.OnColorSwitched -= CheckColor;
+        ColorManager.OnColorUpdate -= UpdateColor;
+
+    }
+
+    private void Awake() {
+        
+        _collider = GetComponent<Collider2D>();
+        _renderer = GetComponent<SpriteRenderer>();
+    }
+
+    private void Start()
+    {
+        _renderer.color = ColorManager.Instance.CurrentColors[colorIdx];
+    }
+
+    void UpdateColor(Color[] colorArray)
+    {
+        _renderer.color = colorArray[colorIdx];
+    }
+    void SwitchColor()
+    {
+        colorIdx = (colorIdx + 1) % 2;
+    }
+
+    void CheckColor()
     {
        _collider.enabled = _background.myColor != _renderer.color;
     }

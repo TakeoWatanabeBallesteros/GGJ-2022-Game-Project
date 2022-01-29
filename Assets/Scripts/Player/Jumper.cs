@@ -27,6 +27,9 @@ public class Jumper : MonoBehaviour
     public bool peakReached;
     bool onGravityArea;
 
+    public Action onJump;
+    public Action onPeak;
+
     private Controls controls;
     private Controls Controls{
         get{
@@ -55,7 +58,6 @@ public class Jumper : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log("Hi");
         if (imJumping && (Math.Sign(lastVelocityFrame) > 0) && (Math.Sign(_rigidbody.velocity.y) < 0) && peakReached == false)
         {
             if (onGravityArea == true)
@@ -63,8 +65,9 @@ public class Jumper : MonoBehaviour
                 gravityDir = -gravityDir;
                 _rigidbody.gravityScale = gravityDir;
                 transform.Rotate(new Vector3(0, 180, 180));
-                peakReached = true;
             }
+            peakReached = true;
+            onPeak?.Invoke();
         }
         lastVelocityFrame = _rigidbody.velocity.y * gravityDir;
     }
@@ -75,7 +78,7 @@ public class Jumper : MonoBehaviour
         Controls.Player.JumpStarted.Enable();
         Controls.Player.JumpStarted.performed += ctx => OnJumpStarted();
         Controls.Player.JumpStarted.canceled += ctx => OnJumpFinished();
-        EnergyBall.OnEnergyBallCollected += ctx => _EnergyBall(ctx);
+        EnergyBall.OnEnergyBallCollected += _EnergyBall;
     }
 
     private void OnDisable()
@@ -84,13 +87,14 @@ public class Jumper : MonoBehaviour
         Controls.Player.JumpStarted.Disable();
         Controls.Player.JumpStarted.performed -= ctx => OnJumpStarted();
         Controls.Player.JumpStarted.canceled -= ctx => OnJumpFinished();
+        EnergyBall.OnEnergyBallCollected -= _EnergyBall;
     }
 
     private void OnLanded()
     {
         imJumping = false;
         peakReached = false;
-        _rigidbody.gravityScale = gravityDir;
+        //_rigidbody.gravityScale = gravityDir;
     }
 
     public void setJump()
@@ -104,6 +108,7 @@ public class Jumper : MonoBehaviour
         {
             timeStart = DateTime.Now;
             Jump();
+            onJump?.Invoke();
         }
     }
 
@@ -139,25 +144,9 @@ public class Jumper : MonoBehaviour
         _rigidbody.gravityScale = gravityDir * (-2 * jumpHeight / (timeToPeak * timeToPeak)) / Physics2D.gravity.y;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("gravityArea"))
-        {
-            onGravityArea = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("gravityArea"))
-        {
-            onGravityArea = false;
-        }
-    }
-
-    private void _EnergyBall(GameObject obj){ 
-        if (obj == gameObject){
-
+    private void _EnergyBall(GameObject obj, bool isTop, float phisicInceaseFactor){ 
+        if (obj != gameObject){
+            //Change param
         }
     }
 }

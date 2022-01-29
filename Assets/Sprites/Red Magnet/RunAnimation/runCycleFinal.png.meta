@@ -1,0 +1,468 @@
+fileFormatVersion: 2
+guid: 5064e648176711b4fad1bfc7aab49705
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -186995520438732710
+    second: runCycleFinal_0
+  - first:
+      213: -2698521510669092933
+    second: runCycleFinal_1
+  - first:
+      213: -5046321642836927153
+    second: runCycleFinal_2
+  - first:
+      213: 6978809655557829845
+    second: runCycleFinal_3
+  - first:
+      213: 5564489587952367235
+    second: runCycleFinal_4
+  - first:
+      213: 6093985580989006763
+    second: runCycleFinal_5
+  - first:
+      213: -1850452037384093739
+    second: runCycleFinal_6
+  - first:
+      213: -3261668691557399841
+    second: runCycleFinal_7
+  - first:
+      213: -4957873368632810755
+    second: runCycleFinal_8
+  - first:
+      213: -1038771852303335785
+    second: runCycleFinal_9
+  - first:
+      213: -8299884769703394434
+    second: runCycleFinal_10
+  - first:
+      213: 8983681886360321753
+    second: runCycleFinal_11
+  - first:
+      213: -4526737753999474113
+    second: runCycleFinal_12
+  - first:
+      213: -2559819808517188722
+    second: runCycleFinal_13
+  - first:
+      213: 5547026361851277141
+    second: runCycleFinal_14
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 95
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: runCycleFinal_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 640.06665
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a58f8ad9098a76df0800000000000000
+      internalID: -186995520438732710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: runCycleFinal_1
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 640.06665
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb771d1cbfcec8ad0800000000000000
+      internalID: -2698521510669092933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: runCycleFinal_2
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 640.06665
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4dd650d33dd7f9b0800000000000000
+      internalID: -5046321642836927153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: runCycleFinal_3
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 640.06665
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d4379a0866b9d060800000000000000
+      internalID: 6978809655557829845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: runCycleFinal_4
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 640.06665
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 386b24e5cc9093d40800000000000000
+      internalID: 5564489587952367235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: runCycleFinal_5
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 0
+        width: 640.06665
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba3c33d399f229450800000000000000
+      internalID: 6093985580989006763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: runCycleFinal_6
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 640.06665
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dfb2d51dafd156e0800000000000000
+      internalID: -1850452037384093739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: runCycleFinal_7
+      rect:
+        serializedVersion: 2
+        x: 4480
+        y: 0
+        width: 640.06665
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd245b82b993cb2d0800000000000000
+      internalID: -3261668691557399841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: runCycleFinal_8
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 0
+        width: 640.06665
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df2a54d6078123bb0800000000000000
+      internalID: -4957873368632810755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: runCycleFinal_9
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 0
+        width: 640.06665
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79ef8c4018a8591f0800000000000000
+      internalID: -1038771852303335785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: runCycleFinal_10
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 0
+        width: 640.06665
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e738721d6c2e0dc80800000000000000
+      internalID: -8299884769703394434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: runCycleFinal_11
+      rect:
+        serializedVersion: 2
+        x: 7040
+        y: 0
+        width: 640.06665
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9de3e9bf3137cac70800000000000000
+      internalID: 8983681886360321753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: runCycleFinal_12
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 0
+        width: 640.06665
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3203851ffbcd21c0800000000000000
+      internalID: -4526737753999474113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: runCycleFinal_13
+      rect:
+        serializedVersion: 2
+        x: 8320
+        y: 0
+        width: 640.06665
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8313585271b97cd0800000000000000
+      internalID: -2559819808517188722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: runCycleFinal_14
+      rect:
+        serializedVersion: 2
+        x: 8960
+        y: 0
+        width: 640.06665
+        height: 682
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55f6fd1361ffafc40800000000000000
+      internalID: 5547026361851277141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
