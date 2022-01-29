@@ -9,12 +9,16 @@ public class PlayerAnimations : MonoBehaviour
     Rigidbody2D rb;
 
     public Animator animator;
-
     GroundChecker groundCheck;
-
     PlayerMovement playerMove;
-
     private Controls controls;
+
+    [SerializeField]
+    GameObject particleOne;
+    [SerializeField]
+    GameObject particleTwo;
+    GameObject player;
+
     private Controls Controls
     {
         get
@@ -42,6 +46,7 @@ public class PlayerAnimations : MonoBehaviour
         jump.onJump += Jump;
         groundCheck.OnLanded += JumpEnded;
         jump.onPeak += Falling;
+        EnergyBall.OnEnergyBallCollected += Electrocuted;
     }
 
     private void OnDisable()
@@ -51,6 +56,7 @@ public class PlayerAnimations : MonoBehaviour
         jump.onJump -= Jump;
         groundCheck.OnLanded -= JumpEnded;
         jump.onPeak -= Falling;
+        EnergyBall.OnEnergyBallCollected -= Electrocuted;
     }
 
     public void Speed(Vector2 vector)
@@ -63,7 +69,6 @@ public class PlayerAnimations : MonoBehaviour
              transform.Rotate(new Vector3(0, 180, 0));
              dreta = !dreta;
         }
- 
     }
 
     void Jump()
@@ -83,4 +88,34 @@ public class PlayerAnimations : MonoBehaviour
         animator.SetBool("isJumping", false);
         animator.SetBool("isFalling", true);
     }
+
+    void Electrocuted(GameObject obj, bool num)
+    {
+        if(obj == this.gameObject)
+        {
+            Instantiate(particleOne, new Vector3(transform.position.x, transform.position.y, transform.position.z - 0.5f), Quaternion.identity, transform);
+            Instantiate(particleTwo, new Vector3(transform.position.x, transform.position.y - 2.5f, transform.position.z - 1f), Quaternion.EulerAngles(Mathf.Deg2Rad*-90, 0, 0), transform);
+        }
+    }
+
+    /*void Electrocuted(GameObject obj, bool num)
+    {
+        animator.SetTrigger("ballColision");
+        StartCoroutine(Stop());      
+    }
+
+    IEnumerator Stop()
+    {
+        jump.DisableControl();
+        playerMove.DisableMovement();
+        rb.gravityScale = 0;
+        rb.velocity = Vector2.zero;
+
+        yield return new WaitForSeconds(1f);
+
+        if (animator.GetBool("isJumping")) Falling();
+        rb.gravityScale = jump.GravityDir;
+        jump.EnableControl();
+        playerMove.EnableMovement();
+    }*/
 }
