@@ -32,10 +32,10 @@ public class EndLevel : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision){
         if(collision.gameObject.layer == LayerMask.NameToLayer ("Player_1")){
-            player1 = true;
+            player1 = false;
         }
         if(collision.gameObject.layer == LayerMask.NameToLayer ("Player_2")){
-            player2 = true;
+            player2 = false;
         }
     }
 
