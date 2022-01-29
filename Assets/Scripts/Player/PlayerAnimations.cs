@@ -90,11 +90,11 @@ public class PlayerAnimations : MonoBehaviour
 
         if(gameObject.layer == LayerMask.NameToLayer("Player_2"))
         {
-            Instantiate(Dust, new Vector3(transform.position.x, transform.position.y - 2.5f, transform.position.z - 0.5f), Quaternion.identity, transform);
+            Instantiate(Dust, new Vector3(transform.position.x, transform.position.y + 2.5f, transform.position.z - 0.5f), Quaternion.identity, transform);
         }
         else
         {
-            Instantiate(Dust, new Vector3(transform.position.x, transform.position.y + 2.5f, transform.position.z - 0.5f), Quaternion.identity, transform);
+            Instantiate(Dust, new Vector3(transform.position.x, transform.position.y - 2.5f, transform.position.z - 0.5f), Quaternion.identity, transform);
         }
     }
 
