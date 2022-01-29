@@ -94,7 +94,7 @@ public class Jumper : MonoBehaviour
     {
         imJumping = false;
         peakReached = false;
-        _rigidbody.gravityScale = gravityDir;
+        //_rigidbody.gravityScale = gravityDir;
     }
 
     public void setJump()
