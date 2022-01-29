@@ -7,7 +7,7 @@ public class StaticColorPlatform : MonoBehaviour
     [SerializeField]
     int colorIdx;
     [SerializeField]
-    ColorChanginElement _background;
+    protected ColorChanginElement _background;
     SpriteRenderer _renderer;
     Collider2D _collider;
 
