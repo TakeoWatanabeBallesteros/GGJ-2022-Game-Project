@@ -15,6 +15,8 @@ public class ColorManager : MonoBehaviour
     public Color[] CurrentColors { get { return _currentColors; } }
     int currAColor = 0;
     int currBColor = 0;
+
+    public bool _SwitchColor  { get { return SwitchColor; } }
     bool SwitchColor = false;
 
     public static Action<Color[]> OnColorUpdate;
