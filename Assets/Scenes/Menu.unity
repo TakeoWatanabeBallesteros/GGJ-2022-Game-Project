@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2963555707463254852, guid: b1299362c6c298e439104f5a3c385b5b, type: 3}
+      propertyPath: sounds.Array.data[11].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 59b2fe90ca2b6724897db38344110bb0, type: 3}
     - target: {fileID: 2963555707463254853, guid: b1299362c6c298e439104f5a3c385b5b, type: 3}
       propertyPath: m_RootOrder
       value: 7

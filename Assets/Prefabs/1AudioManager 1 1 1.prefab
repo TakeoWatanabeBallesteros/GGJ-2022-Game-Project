@@ -1,0 +1,163 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2442172369015976253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2442172369015976255}
+  - component: {fileID: 2442172369015976254}
+  - component: {fileID: 4070285060255717629}
+  m_Layer: 0
+  m_Name: 1AudioManager 1 1 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2442172369015976255
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2442172369015976253}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21.412088, y: 4.494197, z: -71.466415}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2442172369015976254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2442172369015976253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d577a212ed0c2e04dae27efcc8da0d3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicMixerGroup: {fileID: 24300002, guid: e81e012473b20be4b88a2068cff3d3b7, type: 2}
+  soundEffectsMixerGroup: {fileID: 24300002, guid: e81e012473b20be4b88a2068cff3d3b7, type: 2}
+  sounds:
+  - audioType: 1
+    name: Ambience
+    clip: {fileID: 8300000, guid: 92595d606afcbb64189264a0202f0ea6, type: 3}
+    volume: 0.269
+    pitch: 2.29
+    loop: 1
+    source: {fileID: 0}
+  - audioType: 0
+    name: Music
+    clip: {fileID: 8300000, guid: 815f81869ef8739499662f2525fbcaa2, type: 3}
+    volume: 0.557
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - audioType: 0
+    name: Credits
+    clip: {fileID: 8300000, guid: c08d4f37c0a8a1e4b8a60f831b34cd6e, type: 3}
+    volume: 0.409
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - audioType: 0
+    name: Menu
+    clip: {fileID: 8300000, guid: 4c0fa27f6e56b03478afeea8d089d680, type: 3}
+    volume: 0.497
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 1
+    name: Walk
+    clip: {fileID: 8300000, guid: b960f7986385c4948a92ad74d394ea44, type: 3}
+    volume: 1
+    pitch: 2.03
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 0
+    name: Magnet
+    clip: {fileID: 8300000, guid: ab6f2dc2c6c522b4b9888ecec2ba135c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 1
+    name: ON1
+    clip: {fileID: 8300000, guid: 5b51121dab92c374e97bb43b301ad49a, type: 3}
+    volume: 0.785
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 1
+    name: ON2
+    clip: {fileID: 8300000, guid: 411543c59a1b3fe44809adc097b64e26, type: 3}
+    volume: 0.764
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 1
+    name: ON3
+    clip: {fileID: 8300000, guid: 27f7923955d30bf4e997c03f517d1267, type: 3}
+    volume: 0.844
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 1
+    name: ON4
+    clip: {fileID: 8300000, guid: bef2869337ccd5247be612e8a552576d, type: 3}
+    volume: 0.497
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 1
+    name: ON5
+    clip: {fileID: 8300000, guid: 6c431c6cf119c1c47a8ce7cc49a8a62e, type: 3}
+    volume: 0.739
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 1
+    name: ON6
+    clip: {fileID: 8300000, guid: 59b2fe90ca2b6724897db38344110bb0, type: 3}
+    volume: 0.791
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 1
+    name: Jump
+    clip: {fileID: 8300000, guid: 7f42a851717f4c0498aa254adce79941, type: 3}
+    volume: 0.497
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - audioType: 1
+    name: Jump
+    clip: {fileID: 8300000, guid: 7f42a851717f4c0498aa254adce79941, type: 3}
+    volume: 0.497
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  ambient: 
+  music: 
+--- !u!114 &4070285060255717629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2442172369015976253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66944f9a28e2144e8b779c6dac24abc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSliderText: {fileID: 0}
+  soundEffectsSliderText: {fileID: 0}
