@@ -28,6 +28,6 @@ public class Tutorial : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Destroy(this.gameObject);
+        elementToShow.SetActive(false);
     }
 }
