@@ -31,6 +31,7 @@ public class EnergyBall : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.layer == LayerMask.NameToLayer ("Player_1") || other.gameObject.layer == LayerMask.NameToLayer ("Player_2")){
+            FindObjectOfType<AudioManager>().Play("Credits");
             OnEnergyBallCollected?.Invoke(other.gameObject, IsTop, phisicInceaseFactor);
             Destroy(gameObject);
         }

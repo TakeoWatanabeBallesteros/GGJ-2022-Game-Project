@@ -27,7 +27,9 @@ public class PlayerMovement : MonoBehaviour
     void OnEnable() {
         Controls.Player.Move.Enable();
         Controls.Player.Move.performed += ctx => direction = ctx.ReadValue<Vector2>();
+        Controls.Player.Move.performed += ctx => FindObjectOfType<AudioManager>().PlayBucle("Walk");
         Controls.Player.Move.canceled += ctx => direction = Vector2.zero;
+        Controls.Player.Move.canceled += ctx => FindObjectOfType<AudioManager>().Stop("Walk");
         EnergyBall.OnEnergyBallCollected += _EnergyBall;
     }
 

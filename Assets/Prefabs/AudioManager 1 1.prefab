@@ -85,7 +85,7 @@ MonoBehaviour:
   - audioType: 1
     name: Magnet
     clip: {fileID: 8300000, guid: 28eb38212be013f42b338769b81e43a9, type: 3}
-    volume: 0.497
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
