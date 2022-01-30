@@ -18,16 +18,16 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        //if (instance == null)
-        //    instance = this;
-        //else
-        //{
-        //    Destroy(gameObject);
-        //    return;
-        //}
+        if (instance == null)
+            instance = this;
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
 
         //DontDestroyOnLoad(gameObject);
-        foreach(Sound s in sounds)
+        foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
@@ -71,7 +71,7 @@ public class AudioManager : MonoBehaviour
     public void UpdateMixerVolume()
     {
         musicMixerGroup.audioMixer.SetFloat("Music Volume", Mathf.Log10(AudioOptionsManager.musicVolume) * 20);
-        soundEffectsMixerGroup.audioMixer.SetFloat("Sound Effect Volume", Mathf.Log10(AudioOptionsManager.soundEffectVolume) * 20);
+        soundEffectsMixerGroup.audioMixer.SetFloat("Sound EVolume", Mathf.Log10(AudioOptionsManager.soundEffectVolume) * 20);
     }
 
 }
