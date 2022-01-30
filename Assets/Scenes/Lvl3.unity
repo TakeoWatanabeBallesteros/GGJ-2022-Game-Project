@@ -3198,8 +3198,24 @@ PrefabInstance:
       propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4945084765877920129, guid: d32fdba28fcc1e840ba6c3035335e8de, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945084765877920129, guid: d32fdba28fcc1e840ba6c3035335e8de, type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5231981324314826065, guid: d32fdba28fcc1e840ba6c3035335e8de, type: 3}
       propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231981324314826065, guid: d32fdba28fcc1e840ba6c3035335e8de, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231981324314826065, guid: d32fdba28fcc1e840ba6c3035335e8de, type: 3}
+      propertyPath: m_BlocksRaycasts
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5231981324861188841, guid: d32fdba28fcc1e840ba6c3035335e8de, type: 3}

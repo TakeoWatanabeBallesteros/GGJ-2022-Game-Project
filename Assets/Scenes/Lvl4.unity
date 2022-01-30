@@ -7325,14 +7325,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4945084765877920129, guid: d32fdba28fcc1e840ba6c3035335e8de, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945084765877920129, guid: d32fdba28fcc1e840ba6c3035335e8de, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945084765877920129, guid: d32fdba28fcc1e840ba6c3035335e8de, type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231981324314826065, guid: d32fdba28fcc1e840ba6c3035335e8de, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231981324314826065, guid: d32fdba28fcc1e840ba6c3035335e8de, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231981324314826065, guid: d32fdba28fcc1e840ba6c3035335e8de, type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5231981324861188841, guid: d32fdba28fcc1e840ba6c3035335e8de, type: 3}
       propertyPath: m_Name
       value: Transition
       objectReference: {fileID: 0}
     - target: {fileID: 5231981324861188841, guid: d32fdba28fcc1e840ba6c3035335e8de, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5231981324861188842, guid: d32fdba28fcc1e840ba6c3035335e8de, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 9ce113dc8e3705842b5c28f80e84b502, type: 2}
     - target: {fileID: 5231981324861188846, guid: d32fdba28fcc1e840ba6c3035335e8de, type: 3}
       propertyPath: m_Pivot.x
       value: 0
