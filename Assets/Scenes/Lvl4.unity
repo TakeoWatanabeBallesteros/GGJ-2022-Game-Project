@@ -1614,9 +1614,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1382056092374304772, guid: 34e53287b4bea3e46adde457857f3f6f, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382056092374304772, guid: 34e53287b4bea3e46adde457857f3f6f, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 2092234095
+      objectReference: {fileID: 0}
     - target: {fileID: 2189316404978951380, guid: 34e53287b4bea3e46adde457857f3f6f, type: 3}
       propertyPath: m_Name
       value: Sierras
+      objectReference: {fileID: 0}
+    - target: {fileID: 2189316404978951380, guid: 34e53287b4bea3e46adde457857f3f6f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4319913315906590394, guid: 34e53287b4bea3e46adde457857f3f6f, type: 3}
       propertyPath: colorIdx
