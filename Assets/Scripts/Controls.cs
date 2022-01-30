@@ -62,6 +62,15 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RestartLevel"",
+                    ""type"": ""Button"",
+                    ""id"": ""7059ecd6-4a7a-4ae3-80e9-cbb07094ea21"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -284,6 +293,17 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""action"": ""SwtichPlayer"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f49502e5-eabe-4abb-acc0-46aae1ab1d85"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RestartLevel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -324,6 +344,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         m_Player_JumpFinished = m_Player.FindAction("JumpFinished", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_SwtichPlayer = m_Player.FindAction("SwtichPlayer", throwIfNotFound: true);
+        m_Player_RestartLevel = m_Player.FindAction("RestartLevel", throwIfNotFound: true);
         // Scenario
         m_Scenario = asset.FindActionMap("Scenario", throwIfNotFound: true);
         m_Scenario_SwitchColors = m_Scenario.FindAction("SwitchColors", throwIfNotFound: true);
@@ -390,6 +411,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_JumpFinished;
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_SwtichPlayer;
+    private readonly InputAction m_Player_RestartLevel;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
@@ -398,6 +420,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         public InputAction @JumpFinished => m_Wrapper.m_Player_JumpFinished;
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @SwtichPlayer => m_Wrapper.m_Player_SwtichPlayer;
+        public InputAction @RestartLevel => m_Wrapper.m_Player_RestartLevel;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -419,6 +442,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @SwtichPlayer.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwtichPlayer;
                 @SwtichPlayer.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwtichPlayer;
                 @SwtichPlayer.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSwtichPlayer;
+                @RestartLevel.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRestartLevel;
+                @RestartLevel.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRestartLevel;
+                @RestartLevel.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRestartLevel;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -435,6 +461,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @SwtichPlayer.started += instance.OnSwtichPlayer;
                 @SwtichPlayer.performed += instance.OnSwtichPlayer;
                 @SwtichPlayer.canceled += instance.OnSwtichPlayer;
+                @RestartLevel.started += instance.OnRestartLevel;
+                @RestartLevel.performed += instance.OnRestartLevel;
+                @RestartLevel.canceled += instance.OnRestartLevel;
             }
         }
     }
@@ -478,6 +507,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         void OnJumpFinished(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
         void OnSwtichPlayer(InputAction.CallbackContext context);
+        void OnRestartLevel(InputAction.CallbackContext context);
     }
     public interface IScenarioActions
     {
