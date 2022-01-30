@@ -1592,7 +1592,7 @@ MonoBehaviour:
   m_MaxDollyIn: 5000
   m_MaxDollyOut: 5000
   m_MinimumDistance: 1
-  m_MaximumDistance: 74
+  m_MaximumDistance: 40
   m_MinimumFOV: 3
   m_MaximumFOV: 60
   m_MinimumOrthoSize: 0.2
@@ -2418,7 +2418,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 903735463}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.099998, y: 4.5512233, z: -31.272234}
+  m_LocalPosition: {x: -18.099998, y: 4.5512233, z: -31.272184}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4998,7 +4998,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028129541}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.099998, y: 4.5512233, z: -31.272234}
+  m_LocalPosition: {x: -18.099998, y: 4.5512233, z: -31.272184}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 590046483}
