@@ -18,15 +18,15 @@ public class ImageComponentHUD : MonoBehaviour
     public static ImageComponentHUD Instance => _instance;
     private void Awake()
     {
-        if (_instance != null && _instance != this)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            _instance = gameObject.GetComponent<ImageComponentHUD>();
-            DontDestroyOnLoad(gameObject);
-        }
+        //if (_instance != null && _instance != this)
+        //{
+        //    Destroy(gameObject);
+        //}
+        //else
+        //{
+        //    _instance = gameObject.GetComponent<ImageComponentHUD>();
+        //    DontDestroyOnLoad(gameObject);
+        //}
     }
 
     private void Start() {
