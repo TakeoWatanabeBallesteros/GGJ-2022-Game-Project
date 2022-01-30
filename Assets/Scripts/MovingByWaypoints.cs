@@ -8,6 +8,8 @@ public class MovingByWaypoints : MonoBehaviour
     List<Transform> waypoints;
     [SerializeField]
     float speed;
+    [SerializeField]
+    float z;
     int order;
     [SerializeField]
     int nextWP;
@@ -22,7 +24,7 @@ public class MovingByWaypoints : MonoBehaviour
     void Update()
     {
         transform.position = Vector3.Lerp(transform.position, waypoints[nextWP].position, speed * Time.deltaTime);
-        if(Vector3.Distance(transform.position, waypoints[nextWP].position) < 1)
+        if(Vector3.Distance(transform.position, waypoints[nextWP].position) < z)
         {
             nextWP += order;
             if(nextWP == waypoints.Count || nextWP == -1)
