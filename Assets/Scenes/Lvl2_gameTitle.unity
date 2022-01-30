@@ -353,7 +353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4274290119276832297, guid: 2382499f64685bb4381b5b39ca733a12, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5081588474327370746, guid: 2382499f64685bb4381b5b39ca733a12, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
@@ -3684,9 +3684,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4945084765877920129, guid: d32fdba28fcc1e840ba6c3035335e8de, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231981324314826065, guid: d32fdba28fcc1e840ba6c3035335e8de, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5231981324314826079, guid: d32fdba28fcc1e840ba6c3035335e8de, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5231981324861188841, guid: d32fdba28fcc1e840ba6c3035335e8de, type: 3}
       propertyPath: m_Name
@@ -3699,7 +3707,7 @@ PrefabInstance:
     - target: {fileID: 5231981324861188842, guid: d32fdba28fcc1e840ba6c3035335e8de, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: 9ce113dc8e3705842b5c28f80e84b502, type: 2}
+      objectReference: {fileID: 22100000, guid: 1d0e2f8db5b63ac4e85147b65b471bde, type: 2}
     - target: {fileID: 5231981324861188846, guid: d32fdba28fcc1e840ba6c3035335e8de, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3786,7 +3794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6871680019694849590, guid: d32fdba28fcc1e840ba6c3035335e8de, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8284231776816268417, guid: d32fdba28fcc1e840ba6c3035335e8de, type: 3}
       propertyPath: m_Maskable
