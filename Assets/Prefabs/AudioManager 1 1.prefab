@@ -57,21 +57,21 @@ MonoBehaviour:
   - audioType: 0
     name: Music
     clip: {fileID: 8300000, guid: 815f81869ef8739499662f2525fbcaa2, type: 3}
-    volume: 0.557
+    volume: 0.276
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - audioType: 1
     name: Credits
     clip: {fileID: 8300000, guid: c08d4f37c0a8a1e4b8a60f831b34cd6e, type: 3}
-    volume: 0.409
+    volume: 0.278
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - audioType: 0
     name: Menu
     clip: {fileID: 8300000, guid: 4c0fa27f6e56b03478afeea8d089d680, type: 3}
-    volume: 0.497
+    volume: 0.437
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -85,7 +85,7 @@ MonoBehaviour:
   - audioType: 1
     name: Magnet
     clip: {fileID: 8300000, guid: 28eb38212be013f42b338769b81e43a9, type: 3}
-    volume: 1
+    volume: 0.588
     pitch: 1
     loop: 0
     source: {fileID: 0}
