@@ -8105,6 +8105,10 @@ PrefabInstance:
       value: Next Level
       objectReference: {fileID: 0}
     - target: {fileID: 2605844237248137909, guid: 04090e65bf9d65548ad8a3ca1ad78fc3, type: 3}
+      propertyPath: nextLvl
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2605844237248137909, guid: 04090e65bf9d65548ad8a3ca1ad78fc3, type: 3}
       propertyPath: transition
       value: 
       objectReference: {fileID: 1367885462}
