@@ -149,7 +149,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3561475858181769087, guid: 52eb2557c7cf03e4c93a37c555c086b1, type: 3}
+      propertyPath: z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561475858181769087, guid: 52eb2557c7cf03e4c93a37c555c086b1, type: 3}
       propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561475858181769087, guid: 52eb2557c7cf03e4c93a37c555c086b1, type: 3}
+      propertyPath: started
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3561475858181769087, guid: 52eb2557c7cf03e4c93a37c555c086b1, type: 3}
