@@ -12,6 +12,8 @@ public class MovingByWaypoints : MonoBehaviour
     float z;
     int order;
     [SerializeField]
+    bool started;
+    [SerializeField]
     int nextWP;
     // Start is called before the first frame update
     void Start()
@@ -23,14 +25,17 @@ public class MovingByWaypoints : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.Lerp(transform.position, waypoints[nextWP].position, speed * Time.deltaTime);
-        if(Vector3.Distance(transform.position, waypoints[nextWP].position) < z)
+        if (started)
         {
-            nextWP += order;
-            if(nextWP == waypoints.Count || nextWP == -1)
+            transform.position = Vector3.Lerp(transform.position, waypoints[nextWP].position, speed * Time.deltaTime);
+            if (Vector3.Distance(transform.position, waypoints[nextWP].position) < z)
             {
-                order *= -1;
-                nextWP += 2 * order;
+                nextWP += order;
+                if (nextWP == waypoints.Count || nextWP == -1)
+                {
+                    order *= -1;
+                    nextWP += 2 * order;
+                }
             }
         }
     }
