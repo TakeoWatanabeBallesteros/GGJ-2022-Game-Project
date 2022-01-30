@@ -414,6 +414,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cables (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2669886838556030626, guid: fcff118ea80c025438dbe5b6dba76d2d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5437766272076842551, guid: fcff118ea80c025438dbe5b6dba76d2d, type: 3}
       propertyPath: m_SortingLayer
       value: 0
