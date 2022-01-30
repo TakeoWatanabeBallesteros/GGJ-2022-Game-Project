@@ -53,6 +53,7 @@ public class ColorManager : MonoBehaviour
         Controls.Scenario.SwitchColors.Enable();
         Controls.Scenario.SwitchColors.performed += _ =>
         {
+            FindObjectOfType<AudioManager>().Play("ON"+UnityEngine.Random.Range(1,4).ToString());
             SwitchColor = !SwitchColor;
             OnColorSwitch?.Invoke();
             SetColors();
@@ -76,6 +77,7 @@ public class ColorManager : MonoBehaviour
         Controls.Scenario.SwitchColors.Disable();
         Controls.Scenario.SwitchColors.performed -= _ =>
         {
+            FindObjectOfType<AudioManager>().Play("ON"+UnityEngine.Random.Range(1,4).ToString());
             SwitchColor = !SwitchColor;
             OnColorSwitch?.Invoke();
             SetColors();
