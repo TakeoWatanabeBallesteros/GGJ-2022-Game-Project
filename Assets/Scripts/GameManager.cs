@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -38,12 +39,18 @@ public class GameManager : MonoBehaviour
 
     void OnEnable() {
         //Controls.Player.SwtichPlayer.Enable();
+        Controls.Player.RestartLevel.Enable();
+        Controls.Player.RestartLevel.performed += _ => {Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);};
         Controls.Player.SwtichPlayer.performed += _ => SwitchPlayer();
         EnergyBall.OnEnergyBallCollected += BallsCollected;
     }
 
     void OnDisable() {
         Controls.Player.SwtichPlayer.Disable();
+        Controls.Player.RestartLevel.Disable();
+        Controls.Player.RestartLevel.performed += _ => {Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);};
         Controls.Player.SwtichPlayer.performed -= _ => SwitchPlayer();
         EnergyBall.OnEnergyBallCollected -= BallsCollected;
     }
