@@ -71,9 +71,7 @@ public class AudioManager : MonoBehaviour
     public void UpdateMixerVolume()
     {
         musicMixerGroup.audioMixer.SetFloat("Music Volume", Mathf.Log10(AudioOptionsManager.musicVolume) * 20);
-        musicMixerGroup.audioMixer.SetFloat("Music Volume 2", Mathf.Log10(AudioOptionsManager.musicVolume) * 20);
-        soundEffectsMixerGroup.audioMixer.SetFloat("Music Volume", Mathf.Log10(AudioOptionsManager.soundEffectVolume) * 20);
-        soundEffectsMixerGroup.audioMixer.SetFloat("Music Volume 2", Mathf.Log10(AudioOptionsManager.soundEffectVolume) * 20);
+        soundEffectsMixerGroup.audioMixer.SetFloat("Sound Effect Volume", Mathf.Log10(AudioOptionsManager.soundEffectVolume) * 20);
     }
 
 }
