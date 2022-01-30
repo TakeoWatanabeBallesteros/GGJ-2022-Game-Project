@@ -179,9 +179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b2e02c0b4b20fc4991a713160cea87b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  players:
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!4 &101017
 Transform:
   m_ObjectHideFlags: 0
@@ -4179,6 +4176,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red
       objectReference: {fileID: 0}
+    - target: {fileID: 2522739917380717660, guid: 066759d66344f10478320694856ebf8f, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 066759d66344f10478320694856ebf8f, type: 3}
 --- !u!1 &727382997 stripped
@@ -4242,6 +4243,10 @@ PrefabInstance:
     - target: {fileID: 2161741367861157267, guid: 2f57358c934c3cb4585d5749938a2d5f, type: 3}
       propertyPath: m_Name
       value: Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161741367861157267, guid: 2f57358c934c3cb4585d5749938a2d5f, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2161741367861157274, guid: 2f57358c934c3cb4585d5749938a2d5f, type: 3}
       propertyPath: m_RootOrder
