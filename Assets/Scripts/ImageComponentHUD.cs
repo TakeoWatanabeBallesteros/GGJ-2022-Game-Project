@@ -49,7 +49,7 @@ public class ImageComponentHUD : MonoBehaviour
 
     private void OnDisable()
     {
-        ColorManager.OnColorSwitch +=()=>
+        ColorManager.OnColorSwitch -=()=>
         {
            if(colorManager._SwitchColor){//if true is on
                 myImageComponent.sprite = pressedSprite;
