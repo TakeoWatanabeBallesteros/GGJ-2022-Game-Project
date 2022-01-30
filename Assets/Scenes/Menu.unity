@@ -424,6 +424,7 @@ GameObject:
   - component: {fileID: 323366693}
   - component: {fileID: 323366692}
   - component: {fileID: 323366691}
+  - component: {fileID: 323366695}
   - component: {fileID: 323366694}
   m_Layer: 5
   m_Name: 'EXIT_Button '
@@ -554,9 +555,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 323366689}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a96046f6fd4587488664f003032f1cd, type: 3}
+  m_Script: {fileID: 11500000, guid: d55642acf496a174981994293a9d0861, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &323366695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323366689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 323366694}
+          m_TargetAssemblyTypeName: MenuButton, Assembly-CSharp
+          m_MethodName: SoundClickClickMeCagoEnLaPutaMadre
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!850595691 &493846988
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -1365,6 +1395,7 @@ GameObject:
   - component: {fileID: 1062917175}
   - component: {fileID: 1062917174}
   - component: {fileID: 1062917173}
+  - component: {fileID: 1062917177}
   - component: {fileID: 1062917176}
   m_Layer: 5
   m_Name: PLAY_Button
@@ -1495,9 +1526,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 1062917171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a96046f6fd4587488664f003032f1cd, type: 3}
+  m_Script: {fileID: 11500000, guid: d55642acf496a174981994293a9d0861, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1062917177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062917171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1062917176}
+          m_TargetAssemblyTypeName: MenuButton, Assembly-CSharp
+          m_MethodName: SoundClickClickMeCagoEnLaPutaMadre
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1065051169
 GameObject:
   m_ObjectHideFlags: 0

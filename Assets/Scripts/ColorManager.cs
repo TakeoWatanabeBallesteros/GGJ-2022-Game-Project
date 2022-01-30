@@ -115,8 +115,8 @@ public class ColorManager : MonoBehaviour
 
     public void ChangeColor(GameObject obj, bool top, float phisicInceaseFactor)
     {
-        if (top) currBColor++;
-        else currAColor++;
+        if (top && _Bcolors.Length-1 > currBColor) currBColor++;
+        else if(_Acolors.Length-1 > currAColor) currAColor++;
         SetColors();
     }
 }
