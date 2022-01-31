@@ -5319,7 +5319,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 903735463}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.330004, y: 4.395, z: -31.637316}
+  m_LocalPosition: {x: -24.330004, y: 4.395, z: -31.637293}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5673,10 +5673,6 @@ PrefabInstance:
     - target: {fileID: 2161741367861157267, guid: 2f57358c934c3cb4585d5749938a2d5f, type: 3}
       propertyPath: m_Name
       value: Blue
-      objectReference: {fileID: 0}
-    - target: {fileID: 2161741367861157267, guid: 2f57358c934c3cb4585d5749938a2d5f, type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2161741367861157274, guid: 2f57358c934c3cb4585d5749938a2d5f, type: 3}
       propertyPath: m_RootOrder
@@ -10857,10 +10853,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red
       objectReference: {fileID: 0}
-    - target: {fileID: 2522739917380717660, guid: 066759d66344f10478320694856ebf8f, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 066759d66344f10478320694856ebf8f, type: 3}
 --- !u!1 &1796917458 stripped
@@ -12201,7 +12193,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028129541}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.330004, y: 4.395, z: -31.637316}
+  m_LocalPosition: {x: -24.330004, y: 4.395, z: -31.637293}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 590046483}
