@@ -361,6 +361,15 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MousePos"",
+                    ""type"": ""Value"",
+                    ""id"": ""ea9273e2-488f-43db-a263-68c9cad2e73b"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -385,6 +394,17 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""action"": ""SwitchColors"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""abf0da6f-7567-4d81-9cc8-8c0b6ce0eb7b"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MousePos"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -402,6 +422,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         // Scenario
         m_Scenario = asset.FindActionMap("Scenario", throwIfNotFound: true);
         m_Scenario_SwitchColors = m_Scenario.FindAction("SwitchColors", throwIfNotFound: true);
+        m_Scenario_MousePos = m_Scenario.FindAction("MousePos", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -535,11 +556,13 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Scenario;
     private IScenarioActions m_ScenarioActionsCallbackInterface;
     private readonly InputAction m_Scenario_SwitchColors;
+    private readonly InputAction m_Scenario_MousePos;
     public struct ScenarioActions
     {
         private @Controls m_Wrapper;
         public ScenarioActions(@Controls wrapper) { m_Wrapper = wrapper; }
         public InputAction @SwitchColors => m_Wrapper.m_Scenario_SwitchColors;
+        public InputAction @MousePos => m_Wrapper.m_Scenario_MousePos;
         public InputActionMap Get() { return m_Wrapper.m_Scenario; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -552,6 +575,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @SwitchColors.started -= m_Wrapper.m_ScenarioActionsCallbackInterface.OnSwitchColors;
                 @SwitchColors.performed -= m_Wrapper.m_ScenarioActionsCallbackInterface.OnSwitchColors;
                 @SwitchColors.canceled -= m_Wrapper.m_ScenarioActionsCallbackInterface.OnSwitchColors;
+                @MousePos.started -= m_Wrapper.m_ScenarioActionsCallbackInterface.OnMousePos;
+                @MousePos.performed -= m_Wrapper.m_ScenarioActionsCallbackInterface.OnMousePos;
+                @MousePos.canceled -= m_Wrapper.m_ScenarioActionsCallbackInterface.OnMousePos;
             }
             m_Wrapper.m_ScenarioActionsCallbackInterface = instance;
             if (instance != null)
@@ -559,6 +585,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @SwitchColors.started += instance.OnSwitchColors;
                 @SwitchColors.performed += instance.OnSwitchColors;
                 @SwitchColors.canceled += instance.OnSwitchColors;
+                @MousePos.started += instance.OnMousePos;
+                @MousePos.performed += instance.OnMousePos;
+                @MousePos.canceled += instance.OnMousePos;
             }
         }
     }
@@ -575,5 +604,6 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     public interface IScenarioActions
     {
         void OnSwitchColors(InputAction.CallbackContext context);
+        void OnMousePos(InputAction.CallbackContext context);
     }
 }
