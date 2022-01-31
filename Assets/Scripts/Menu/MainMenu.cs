@@ -9,13 +9,11 @@ public class MainMenu : MonoBehaviour
     public void Play()
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        Debug.Log("Scene Game");
         SceneManager.LoadScene(1);
     }
 
     public void PlayCreditScene()
     {
-        Debug.Log("Scene CREDITS");
         SceneManager.LoadScene("Credits");
         
         FindObjectOfType<AudioManager>().Play("Credits");
@@ -26,7 +24,6 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
 #endif
 #if UNITY_EDITOR
-        Debug.Log("Quit");
         UnityEditor.EditorApplication.isPlaying = false;
         #endif
     }
