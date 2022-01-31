@@ -4,20 +4,34 @@ using UnityEngine;
 
 public class MovementMenu : MonoBehaviour
 {
-    float mousePosX;
-    float mousePosY;
+    Vector2 mousePosition;
     [SerializeField] float movementQuantity;
-    void Start()
+
+    private Controls controls;
+    private Controls Controls
     {
-        
+        get
+        {
+            if (controls != null) { return controls; }
+            return controls = new Controls();
+        }
+    }
+
+    private void OnEnable()
+    {
+        Controls.Scenario.MousePos.Enable();
+        Controls.Scenario.MousePos.performed += ctx => mousePosition = ctx.ReadValue<Vector2>();
+    }
+
+    private void OnDisable()
+    {
+        Controls.Scenario.MousePos.Disable();
+        Controls.Scenario.MousePos.performed -= ctx => mousePosition = ctx.ReadValue<Vector2>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        mousePosX = Input.mousePosition.x;
-        mousePosY = Input.mousePosition.y;
-
-        this.GetComponent<RectTransform>().position = new Vector2((mousePosX / Screen.width) * movementQuantity + (Screen.width / 2), (mousePosY / Screen.height) * movementQuantity + (Screen.height / 2));
+        this.GetComponent<RectTransform>().position = new Vector2((mousePosition.x / Screen.width) * movementQuantity + (Screen.width / 2), (mousePosition.y / Screen.height) * movementQuantity + (Screen.height / 2));
     }
 }
