@@ -5,10 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class CreditsExit : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape) == true)
-            SceneManager.LoadScene("Menu");
+    private Controls controls;
+    private Controls Controls{
+        get{
+            if(controls != null) {return controls;}
+            return controls = new Controls();
+        }
+    }
+    void OnEnable() {
+        Controls.Player.Pause.Enable();
+        Controls.Player.Pause.performed += _ => {SceneManager.LoadScene("Menu");};
+    }
+
+    void OnDisable() {
+        Controls.Player.Pause.Disable();
+        Controls.Player.Pause.performed -= _ => {SceneManager.LoadScene("Menu");};
     }
 }
