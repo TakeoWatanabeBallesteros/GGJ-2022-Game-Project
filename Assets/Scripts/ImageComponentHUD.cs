@@ -28,14 +28,7 @@ public class ImageComponentHUD : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
-
-    private void Start() {
-        if(colorManager._SwitchColor){//if true is on
-                myImageComponent.sprite = pressedSprite;
-           }else{myImageComponent.sprite = originalSprite;}
-    }
-
-     private void OnEnable()
+    private void OnEnable()
     {
         GameObject CM = GameObject.FindWithTag("Color Manager");
         colorManager = CM.GetComponent<ColorManager>();
@@ -57,4 +50,11 @@ public class ImageComponentHUD : MonoBehaviour
         };
     }
     
+    private void Start() {
+        if(colorManager._SwitchColor){//if true is on
+                myImageComponent.sprite = pressedSprite;
+           }else{myImageComponent.sprite = originalSprite;}
+    }
+
+ 
 }
