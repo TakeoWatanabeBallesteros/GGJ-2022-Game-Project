@@ -951,6 +951,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4488777066964994035, guid: b5b9dfa3174875f4e804d109a18f91f5, type: 3}
+      propertyPath: m_DeselectOnBackgroundClick
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5902225715844618376, guid: b5b9dfa3174875f4e804d109a18f91f5, type: 3}
       propertyPath: m_FirstSelected
       value: 
