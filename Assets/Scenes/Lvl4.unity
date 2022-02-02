@@ -3796,7 +3796,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5788203612637238999, guid: bc08852cd3bcc55478e09f5a6e2e53f9, type: 3}
       propertyPath: m_Size.y
-      value: 1.0086513
+      value: 0.9982847
       objectReference: {fileID: 0}
     - target: {fileID: 5788203612637238999, guid: bc08852cd3bcc55478e09f5a6e2e53f9, type: 3}
       propertyPath: m_Offset.x
@@ -3804,7 +3804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5788203612637238999, guid: bc08852cd3bcc55478e09f5a6e2e53f9, type: 3}
       propertyPath: m_Offset.y
-      value: -0.00620839
+      value: -0.0010251403
       objectReference: {fileID: 0}
     - target: {fileID: 5788203612637239000, guid: bc08852cd3bcc55478e09f5a6e2e53f9, type: 3}
       propertyPath: m_RootOrder
@@ -5976,7 +5976,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -2.235, y: 1.9}
+    - - {x: -2.1626654, y: 1.8978759}
       - {x: -3.0249999, y: 1.06}
       - {x: -3.0249999, y: -1.9}
       - {x: 3.0249999, y: -1.9}
@@ -9314,7 +9314,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 4.7599998, y: 0.445}
+    - - {x: 4.8349123, y: 0.31328762}
       - {x: 4, y: 1.355}
       - {x: -4.0699997, y: 1.355}
       - {x: -4.14, y: 1.285}
@@ -9324,7 +9324,7 @@ PolygonCollider2D:
       - {x: -6.79, y: -1.355}
       - {x: 6.79, y: -1.355}
       - {x: 6.79, y: 0.24499999}
-      - {x: 6.7799997, y: 0.255}
+      - {x: 6.7799997, y: 0.31858528}
 --- !u!4 &1579279932 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5862768176320077113, guid: be8b1a36c12379b479a5cc7e983d7701, type: 3}
@@ -11233,7 +11233,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5788203612637238999, guid: bc08852cd3bcc55478e09f5a6e2e53f9, type: 3}
       propertyPath: m_Size.y
-      value: 1.0086513
+      value: 0.99840117
       objectReference: {fileID: 0}
     - target: {fileID: 5788203612637238999, guid: bc08852cd3bcc55478e09f5a6e2e53f9, type: 3}
       propertyPath: m_Offset.x
@@ -11241,7 +11241,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5788203612637238999, guid: bc08852cd3bcc55478e09f5a6e2e53f9, type: 3}
       propertyPath: m_Offset.y
-      value: -0.00620839
+      value: -0.001083374
       objectReference: {fileID: 0}
     - target: {fileID: 5788203612637239000, guid: bc08852cd3bcc55478e09f5a6e2e53f9, type: 3}
       propertyPath: m_RootOrder
