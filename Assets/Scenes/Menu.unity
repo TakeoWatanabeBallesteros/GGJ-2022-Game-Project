@@ -544,6 +544,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &407204584 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7346834131394933535, guid: d30c3d3b765047e4a9664631558a22a3, type: 3}
+  m_PrefabInstance: {fileID: 1017321709}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!850595691 &493846988
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -1204,8 +1215,28 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7346834131534436270, guid: d30c3d3b765047e4a9664631558a22a3, type: 3}
+      propertyPath: m_TargetGraphic
+      value: 
+      objectReference: {fileID: 407204584}
+    - target: {fileID: 7346834131534436270, guid: d30c3d3b765047e4a9664631558a22a3, type: 3}
       propertyPath: m_Navigation.m_Mode
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346834131534436270, guid: d30c3d3b765047e4a9664631558a22a3, type: 3}
+      propertyPath: m_Colors.m_NormalColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346834131534436270, guid: d30c3d3b765047e4a9664631558a22a3, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346834131534436270, guid: d30c3d3b765047e4a9664631558a22a3, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7346834131534436270, guid: d30c3d3b765047e4a9664631558a22a3, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7346834131534436270, guid: d30c3d3b765047e4a9664631558a22a3, type: 3}
       propertyPath: m_Navigation.m_SelectOnDown

@@ -3,9 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenuGame : MonoBehaviour
 {
+
+    [SerializeField]
+    Button PauseInitButton;
     public GameObject pauseMenuUI;
 
     private Controls controls;
@@ -18,12 +22,14 @@ public class PauseMenuGame : MonoBehaviour
 
     void OnEnable() {
         Controls.Player.Pause.Enable();
-        Controls.Player.Pause.performed += _ => {(pauseMenuUI.activeSelf ? new Action(Resume) : new Action(Pause))();};
+        Controls.Player.Pause.performed += _ => {(pauseMenuUI.activeSelf ? new Action(Resume) : new Action(Pause))();
+        PauseInitButton.Select();};
     }
 
     void OnDisable() {
         Controls.Player.Pause.Disable();
-        Controls.Player.Pause.performed -= _ => {(pauseMenuUI.activeSelf ? new Action(Resume) : new Action(Pause))();};
+        Controls.Player.Pause.performed -= _ => {(pauseMenuUI.activeSelf ? new Action(Resume) : new Action(Pause))();
+        PauseInitButton.Select();};
     }
 
     private void Pause()
