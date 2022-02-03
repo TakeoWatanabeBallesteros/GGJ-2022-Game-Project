@@ -395,17 +395,6 @@
                 },
                 {
                     "name": "",
-                    "id": "4d27fc21-0600-40b4-bfb1-6f8b1c014326",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "SwitchColors",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "abf0da6f-7567-4d81-9cc8-8c0b6ce0eb7b",
                     "path": "<Mouse>/position",
                     "interactions": "",
