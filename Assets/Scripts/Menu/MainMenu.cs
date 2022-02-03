@@ -11,6 +11,21 @@ public class MainMenu : MonoBehaviour
     Button MainMenuInitButton;
     [SerializeField]
     Slider OptionsInitButton;
+    private Controls controls;
+    private Controls Controls{
+        get{
+            if(controls != null) {return controls;}
+            return controls = new Controls();
+        }
+    }
+    private void OnEnable() {
+        Controls.Player.Demo.Enable();
+        Controls.Player.Demo.started += _ => {print("Ap");};
+    }
+    private void OnDisable() {
+        Controls.Player.Demo.Enable();
+        Controls.Player.Demo.started -= _ => {print("Ap");};
+    }
     public void Play()
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
