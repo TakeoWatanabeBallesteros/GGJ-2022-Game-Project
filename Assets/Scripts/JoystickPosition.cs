@@ -30,12 +30,13 @@ public class JoystickPosition : MonoBehaviour
         Controls.Touch.TouchPress.performed -= _ => SetJoystick();
         Controls.Touch.TouchPress.canceled -= _ => {Joystick.enabled = false;};
     }
-
     void SetJoystick(){
-        Joystick.enabled = true;
         Controls.Touch.TouchPos.performed += ctx => {
             Vector2 touchPos = ctx.ReadValue<Vector2>();
-            if(touchPos.x < Screen.width/2 && touchPos.y > Screen.height/2)
-                transform.position = touchPos;};
+            if(touchPos.x < Screen.width/2 && touchPos.y < Screen.height/2){
+                Joystick.enabled = true;
+                transform.position = touchPos;
+            }
+        };
     }
 }

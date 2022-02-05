@@ -19,7 +19,6 @@ public class PlayUIPlatform : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        /*
         if(SystemInfo.deviceType == DeviceType.Handheld){
             restart.SetActive(true);
             pause.SetActive(true);
@@ -34,6 +33,6 @@ public class PlayUIPlatform : MonoBehaviour
             jumpPhone.SetActive(false);
             shiftPhone.SetActive(false);
             shiftPC.SetActive(true);
-        }*/
+        }
     }
 }
