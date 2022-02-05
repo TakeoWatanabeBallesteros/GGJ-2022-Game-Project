@@ -80,15 +80,6 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Demo"",
-                    ""type"": ""Button"",
-                    ""id"": ""4f647028-7f5b-45c3-9a99-f721d3f906f3"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -355,17 +346,6 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""4b4c5a2f-439c-4ce9-ba34-de09e09068db"",
-                    ""path"": ""<Touchscreen>/primaryTouch/press"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Demo"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -439,7 +419,6 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         m_Player_SwtichPlayer = m_Player.FindAction("SwtichPlayer", throwIfNotFound: true);
         m_Player_RestartLevel = m_Player.FindAction("RestartLevel", throwIfNotFound: true);
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
-        m_Player_Demo = m_Player.FindAction("Demo", throwIfNotFound: true);
         // Scenario
         m_Scenario = asset.FindActionMap("Scenario", throwIfNotFound: true);
         m_Scenario_SwitchColors = m_Scenario.FindAction("SwitchColors", throwIfNotFound: true);
@@ -509,7 +488,6 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_SwtichPlayer;
     private readonly InputAction m_Player_RestartLevel;
     private readonly InputAction m_Player_Pause;
-    private readonly InputAction m_Player_Demo;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
@@ -520,7 +498,6 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         public InputAction @SwtichPlayer => m_Wrapper.m_Player_SwtichPlayer;
         public InputAction @RestartLevel => m_Wrapper.m_Player_RestartLevel;
         public InputAction @Pause => m_Wrapper.m_Player_Pause;
-        public InputAction @Demo => m_Wrapper.m_Player_Demo;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -548,9 +525,6 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @Pause.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
                 @Pause.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
                 @Pause.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
-                @Demo.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDemo;
-                @Demo.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDemo;
-                @Demo.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDemo;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -573,9 +547,6 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @Pause.started += instance.OnPause;
                 @Pause.performed += instance.OnPause;
                 @Pause.canceled += instance.OnPause;
-                @Demo.started += instance.OnDemo;
-                @Demo.performed += instance.OnDemo;
-                @Demo.canceled += instance.OnDemo;
             }
         }
     }
@@ -629,7 +600,6 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         void OnSwtichPlayer(InputAction.CallbackContext context);
         void OnRestartLevel(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
-        void OnDemo(InputAction.CallbackContext context);
     }
     public interface IScenarioActions
     {

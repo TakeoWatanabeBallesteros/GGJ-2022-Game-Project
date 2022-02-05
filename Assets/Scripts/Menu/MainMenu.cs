@@ -18,14 +18,6 @@ public class MainMenu : MonoBehaviour
             return controls = new Controls();
         }
     }
-    private void OnEnable() {
-        Controls.Player.Demo.Enable();
-        Controls.Player.Demo.started += _ => {print("Ap");};
-    }
-    private void OnDisable() {
-        Controls.Player.Demo.Enable();
-        Controls.Player.Demo.started -= _ => {print("Ap");};
-    }
     public void Play()
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
