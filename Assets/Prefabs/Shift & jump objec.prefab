@@ -255,6 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4ae8c1375384144bbd90455f59836c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restart: {fileID: 4795627346055657758}
   pause: {fileID: 2062604801368586455}
   movePhone: {fileID: 2664546809948755280}
   jumpPhone: {fileID: 6068684366743280392}
@@ -436,6 +437,7 @@ GameObject:
   - component: {fileID: 3234140512894777008}
   - component: {fileID: 5175740037178597232}
   - component: {fileID: 2180733779438706655}
+  - component: {fileID: 4710451879210220821}
   m_Layer: 5
   m_Name: Move Box
   m_TagString: Untagged
@@ -490,7 +492,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 53d28ebcc12a8b24fbf17443882ff7ca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 11b3ae8bc981e5545851e16de2f293d3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -514,6 +516,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MovementRange: 100
   m_ControlPath: <Gamepad>/leftStick
+--- !u!114 &4710451879210220821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2664546809948755280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 516820036f1bb2d44bec896dbfbb525f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Joystick: {fileID: 0}
 --- !u!1 &4795627346055657758
 GameObject:
   m_ObjectHideFlags: 0
