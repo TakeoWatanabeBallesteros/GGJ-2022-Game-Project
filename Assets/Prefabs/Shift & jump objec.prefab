@@ -436,8 +436,8 @@ GameObject:
   - component: {fileID: 6717758248261525040}
   - component: {fileID: 3234140512894777008}
   - component: {fileID: 5175740037178597232}
-  - component: {fileID: 2180733779438706655}
   - component: {fileID: 4710451879210220821}
+  - component: {fileID: 1822201411}
   m_Layer: 5
   m_Name: Move Box
   m_TagString: Untagged
@@ -502,20 +502,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2180733779438706655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2664546809948755280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9d677f1681015749b15c436eec6d880, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MovementRange: 100
-  m_ControlPath: <Gamepad>/leftStick
 --- !u!114 &4710451879210220821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,6 +515,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Joystick: {fileID: 0}
+--- !u!114 &1822201411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2664546809948755280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f9cedc3ade6b90409a99f6377f639b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MovementRange: 100
+  m_ControlPath: <Gamepad>/leftStick
 --- !u!1 &4795627346055657758
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,16 +555,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4795627346055657758}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 889016515409399412}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.87500006, y: 0.88000005}
   m_AnchorMax: {x: 0.9255209, y: 0.9710001}
-  m_AnchoredPosition: {x: 0, y: 0.1000061}
+  m_AnchoredPosition: {x: 0, y: 0.099975586}
   m_SizeDelta: {x: 0, y: -0.000006198883}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &5519113128702363555
