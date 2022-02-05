@@ -237,6 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myImageComponent: {fileID: 889016516747879892}
+  myImage: {fileID: 1251327411}
   originalSprite: {fileID: 21300000, guid: f8d91542b74c98b479fa3ca20bee8261, type: 3}
   pressedSprite: {fileID: 21300000, guid: e3bc37d25c4f4b34f80c13f481aabe9f, type: 3}
 --- !u!1 &889016516747879895

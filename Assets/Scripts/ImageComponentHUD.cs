@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class ImageComponentHUD : MonoBehaviour
 {  
     [SerializeField]
-    Image myImageComponent; // Image component attached to this gameobject
-
+    Image myImageComponent;
+    [SerializeField]
+    Image myImage;
     public Sprite originalSprite;
     public Sprite pressedSprite;
 
@@ -36,7 +37,9 @@ public class ImageComponentHUD : MonoBehaviour
         {
            if(colorManager._SwitchColor){//if true is on
                 myImageComponent.sprite = pressedSprite;
-           }else{myImageComponent.sprite = originalSprite;}
+                myImage.sprite = pressedSprite;
+           }else{myImageComponent.sprite = originalSprite;
+           myImage.sprite = originalSprite;}
         };
     }
 
@@ -46,14 +49,18 @@ public class ImageComponentHUD : MonoBehaviour
         {
            if(colorManager._SwitchColor){//if true is on
                 myImageComponent.sprite = pressedSprite;
-           }else{myImageComponent.sprite = originalSprite;}
+                myImage.sprite = pressedSprite;
+           }else{myImageComponent.sprite = originalSprite;
+           myImage.sprite = originalSprite;}
         };
     }
     
     private void Start() {
         if(colorManager._SwitchColor){//if true is on
                 myImageComponent.sprite = pressedSprite;
-           }else{myImageComponent.sprite = originalSprite;}
+                myImage.sprite = pressedSprite;
+           }else{myImageComponent.sprite = originalSprite;
+           myImage.sprite = originalSprite;}
     }
 
  
