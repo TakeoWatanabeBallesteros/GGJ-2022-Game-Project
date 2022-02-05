@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class ImageComponentHUD : MonoBehaviour
 {  
     [SerializeField]
-    Image myImageComponent;
+    Image shiftPC;
     [SerializeField]
-    Image myImage;
+    Image shiftMobile;
     public Sprite originalSprite;
     public Sprite pressedSprite;
 
@@ -36,10 +36,10 @@ public class ImageComponentHUD : MonoBehaviour
         ColorManager.OnColorSwitch +=()=>
         {
            if(colorManager._SwitchColor){//if true is on
-                myImageComponent.sprite = pressedSprite;
-                myImage.sprite = pressedSprite;
-           }else{myImageComponent.sprite = originalSprite;
-           myImage.sprite = originalSprite;}
+                shiftPC.sprite = pressedSprite;
+                shiftMobile.sprite = pressedSprite;
+           }else{shiftPC.sprite = originalSprite;
+           shiftMobile.sprite = originalSprite;}
         };
     }
 
@@ -48,19 +48,19 @@ public class ImageComponentHUD : MonoBehaviour
         ColorManager.OnColorSwitch -=()=>
         {
            if(colorManager._SwitchColor){//if true is on
-                myImageComponent.sprite = pressedSprite;
-                myImage.sprite = pressedSprite;
-           }else{myImageComponent.sprite = originalSprite;
-           myImage.sprite = originalSprite;}
+                shiftPC.sprite = pressedSprite;
+                shiftMobile.sprite = pressedSprite;
+           }else{shiftPC.sprite = originalSprite;
+           shiftMobile.sprite = originalSprite;}
         };
     }
     
     private void Start() {
         if(colorManager._SwitchColor){//if true is on
-                myImageComponent.sprite = pressedSprite;
-                myImage.sprite = pressedSprite;
-           }else{myImageComponent.sprite = originalSprite;
-           myImage.sprite = originalSprite;}
+                shiftPC.sprite = pressedSprite;
+                shiftMobile.sprite = pressedSprite;
+           }else{shiftPC.sprite = originalSprite;
+           shiftMobile.sprite = originalSprite;}
     }
 
  
